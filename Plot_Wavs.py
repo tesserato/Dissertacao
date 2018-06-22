@@ -10,7 +10,7 @@ def read_wav(path): # returns signal & fps
   fps = wav.getframerate()
   return signal, fps
 
-os.makedirs('plots', exist_ok=True)
+os.makedirs('wav_plots', exist_ok=True)
 
 filenames = os.listdir()
 

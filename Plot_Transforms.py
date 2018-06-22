@@ -26,17 +26,21 @@ names = []
 for filename in filenames:
   names.append(filename.replace('.wav', ''))
 
-
+lower_freq = 440 - 40
+upper_freq = 440 + 40
 
 for name in names:
   s, fps = read_wav(name + '.wav')
   n = s.shape[0]
-  local_max_freq = int(round(20000 / fps * n))
-  FT = rfft(s)[ :local_max_freq]
+  local_lower_freq = int(round(lower_freq / fps * n))
+  local_upper_freq = int(round(upper_freq / fps * n))
+  FT = rfft(s) * 2 / n
+  summ = np.sum(np.abs(FT))
+  FT = FT[local_lower_freq + 1 : local_upper_freq]
 
   
   Y_pwr = np.abs(FT)
-  X = np.linspace(0, 20000, Y_pwr.shape[0])
+  X = np.linspace(lower_freq, upper_freq, Y_pwr.shape[0])
   M = np.max(Y_pwr)
 
   Y_real = FT.real / M
@@ -47,21 +51,35 @@ for name in names:
   fig = plt.figure(1)
   fig.set_size_inches((n / 50) / fig.dpi, 1200 / fig.dpi)
   
+  print('01')
   plt.subplot(311)
-  plt.plot(X, Y_pwr, '0.3', label='Max(|F|) =' + str(M), linewidth=.5)
+  lbl = 'Max(|F|) =' + str(M) + '  Sum(|F|) =' + str(summ)
+  if upper_freq - lower_freq <= 100: 
+    plt.stem(X, Y_pwr, '0.3', label=lbl, markerfmt='k.', basefmt='k')
+  else:
+    plt.plot(X, Y_pwr, '0.3', label=lbl, linewidth=.5)
   plt.legend()
   plt.ylabel('Power', fontsize=14, color='k')
-  plt.axis([20, 20000, 0, 1.01 ])
+  plt.axis([lower_freq, upper_freq, 0, 1.05 ])
 
+  print('02')
   plt.subplot(312)
-  plt.plot(X, Y_real, '0.3', linewidth=.5)
+  if upper_freq - lower_freq <= 100: 
+    plt.stem(X, Y_real, '0.3', linewidth=.5, markerfmt='k.', basefmt='k')
+  else:
+    plt.plot(X, Y_real, '0.3', linewidth=.5)
   plt.ylabel('Real', fontsize=14, color='k')
-  plt.axis([20, 20000,-1.01, 1.01 ])
+  plt.axis([lower_freq, upper_freq,-1.01, 1.01 ])
 
+
+  print('03')
   plt.subplot(313)
-  plt.plot(X, Y_imag, '0.3', linewidth=.5)
+  if upper_freq - lower_freq <= 100: 
+    plt.stem(X, Y_imag, '0.3', linewidth=.5, markerfmt='k.', basefmt='k')
+  else:
+    plt.plot(X, Y_imag, '0.3', linewidth=.5)
   plt.ylabel('Imaginary', fontsize=14, color='k')
-  plt.axis([20, 20000,-1.01, 1.01 ])
+  plt.axis([lower_freq, upper_freq,-1.01, 1.01 ])
 
 
   
