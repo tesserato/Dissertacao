@@ -17,11 +17,11 @@ def create_signal(N, fps, real_frequency, phase = 0, amplitude = 1, decay = 0):
   X = np.arange(0,N,1)
   return f(X)
 
-f = 440
+f = 10000
 p = 0
 a = 5000
-d = 0
+d = 0.01
 
 
-w = create_signal(44100 * 3, 44100, f, p, a, d)
+w = create_signal(500, 44100, f, p, a, d)
 save_wav(w, str(f) + 'hz_' + str(d) + 'd.wav')
