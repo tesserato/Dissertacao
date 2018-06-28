@@ -1,0 +1,1 @@
+pandoc -o Dissert.docx Dissert.md --bibliography=bib.bib --reference-doc=reference.docx
