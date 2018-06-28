@@ -1,4 +1,223 @@
-<p><strong>Resumo</strong></p>
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Redes Neurais Aplicadas à Modelagem de Instrumentos Acústicos para Síntese Sonora em Tempo Real</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({"extensions":["tex2jax.js"],"jax":["input/TeX","output/HTML-CSS"],"messageStyle":"none","tex2jax":{"processEnvironments":false,"processEscapes":true,"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"TeX":{"extensions":["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]},"HTML-CSS":{"availableFonts":["TeX"]}});
+        </script>
+        <script type="text/javascript" async src="file:///C:\Users\tesse\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.3.5\node_modules\@shd101wyy\mume\dependencies\mathjax\MathJax.js"></script>
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <p><strong>Resumo</strong></p>
 <p>Palavras-chave:</p>
 <p><strong>Abstract</strong></p>
 <p>Keywords:</p>
@@ -7,21 +226,21 @@
 <p>Lista de Tabelas</p>
 <p>Lista de Siglas</p>
 <p>Sumário</p>
-<h1 id="introdução">Introdução</h1>
+<h1 id="introdu&#xE7;&#xE3;o">Introdução</h1>
 <p>O presente trabalho investiga, sob diferentes perspectivas, o potencial de aplicação dos recentes desenvolvimentos teóricos na área de redes neurais à modelagem de instrumentos acústicos, com vistas à sintese sonora em tempo real. Enfase é dada a intrumentos de caráter percussivo, no sentido de instrumentos em que o som é gerado por uma excitação inicial, aproximadamente impulsiva do ponto de vista físico, e a subsequente vibração livre do(s) componentes pertinentes do instrumento. Esse é o caso, por exemplo, das peças de um kit de bateria excitadas por uma baqueta, dos (conjuntos de) cordas de um piano acionadas pelo martelo alavancado pelo pressionar das teclas e, com um maior grau de aproximação, a excitação causada pelos dedos ou palheta em instrumentos de corda.</p>
 <p>A grande área denominada Inteligência artificial é um dos campos da ciência mais explorados na atualidade, sendo utilizada em uma gama crescente de aplicações que cobrem desde o entretenimento à saúde, passando por campos como segurança e políticas públicas. Sundar Pichai, atual CEO do Google, afirmou recentemente em um discurso no Fórum Econômico Mundial que a “inteligência artificial é provavelmente a coisa mais importante na qual a humanidade já trabalhou”, equiparando sua importância à eletricidade e ao fogo e declarando ainda que esta tecnologia é o coração do Google<span class="citation" data-cites="cnnmoney">(“Google Ceo Sundar Pichai: Artificial Intelligence More ’Profound Than Electricity or Fire’,” n.d.)</span></p>
 <p>O comentário ilustra, excluídos superlativos midiáticos, a centralidade do tema no modelo de negócios de uma das maiores empresas do mundo, tendência acompanhada por outros gigantes da tecnologia, como Apple e Microsoft. Na contramão desse movimento, no entanto, observa-se uma escassa utilização dessa tecnologia por empresas do ramo de instrumentos virtuais, talvez motivada pelo baixo volume de pesquisas ne área; Um levantamento bibliográfico revela que trabalhos relacionados à utilização de redes neurais para a simulação de instrumentos musicais ainda são bastante escassos, a despeito do sucesso desta ferramenta em áreas afins.</p>
 <p>O potencial de inovação desse campo é comprovado pelo papel central (muitas vezes representando o estado da arte) que as redes neurais artificiais vem desempenhando em áreas diretamente correlatas, com o campo de síntese de voz (text-to-speech), ou ainda em campos menos obviamente relacionados, à exemplo dos grandes avanços na área de <em>computer vision</em>, como a geração de imagens e videos, transferência de estilos (e até rostos) entre essas mídias, colorização automática ou semi-automática de imagens em preto e branco e a constante investigação e refinamento de novas arquiteturas e métodos aplicados à essas finalidades.</p>
 <p>Esses resultados estimulam a transposição de algumas dessas técnicas e <em>insights</em> para o caso da síntese sonora, principalmente quando percebemos que o tratamento da representação do som em forma digital, comumente representado na forma de um vetor unidimensional representando posições da onda sonora original, contínua, em relação ao tempo, é um caso específico da representação de imagens por vetores bi ou tridimensionais.</p>
 <p>Do ponto de vista da indústria, embora o interesse por instrumentos musicais digitais (DMIs) tenha crescido bastante na última década<span class="citation" data-cites="staudt2016development">(Staudt 2016)</span>, os instrumentos virtuais considerados <em>industry standard</em> ainda baseiam-se prioritariamente em extensas coleções de <em>samples</em>, demandando uma alta quantidade de memória e poder de processamento do <em>hardware</em> utilizado.</p>
-<h2 id="problema-simulação-em-tempo-real-de-instrumentos-acústicos-aplicação-bateria">Problema: simulação em tempo real de instrumentos <strong>acústicos</strong> (aplicação: bateria)</h2>
-<h2 id="questão-de-pesquisa">Questão de pesquisa</h2>
+<h2 id="problema-simula&#xE7;&#xE3;o-em-tempo-real-de-instrumentos-ac&#xFA;sticos-aplica&#xE7;&#xE3;o-bateria">Problema: simulação em tempo real de instrumentos <strong>acústicos</strong> (aplicação: bateria)</h2>
+<h2 id="quest&#xE3;o-de-pesquisa">Questão de pesquisa</h2>
 <p>Busca-se, desta forma, identificar metodologias que deem suporte à modelagem de instrumentos musicais acústicos, com a aplicação do estado da arte das redes neurais, dando origem a simulações mais realistas, principalmente do ponto de vista da percepção humana, e mais eficintes do ponto de vista computacional.</p>
 <p>A proposta inclui a identificação da arquitetura mais apropriada, assim como seus parâmetros, incluindo o número de camadas, neurônios, a mais apropriada forma de atualização dos pesos e eventuais formas de tratamento dos dados utilizados no treinamento.</p>
 <h2 id="escopo">Escopo</h2>
 <h2 id="estrutura">Estrutura</h2>
-<h2 id="relevância">Relevância <!-- socio-econômica --></h2>
-<h1 id="revisão-bibliográfica">Revisão Bibliográfica</h1>
+<h2 id="relev&#xE2;ncia-socio-econ&#xF4;mica-">Relevância <!-- socio-econômica --></h2>
+<h1 id="revis&#xE3;o-bibliogr&#xE1;fica">Revisão Bibliográfica</h1>
 <h2 id="redes-neurais-artificiais">Redes Neurais Artificiais</h2>
 <p>No contexto mais amplo da inteligência artificial, redes neurais artificiais possuem um papel primordial, pois tem sido, em suas diversas encarnações e arquiteturas, o principal representante da inteligência artificial em diversas aplicações práticas.</p>
 <p>Multidisciplinar desde o nascimento, o desenvolvimento das redes neurais artificiais pode ser remontado aos primeiros esforços para sistematização teórica da forma como o cérebro humano funciona, a partir dos trabalhos de Hermann von Helmholtz, Ernst Mach e Ivan Pavlov, na virada do século 19<span class="citation" data-cites="hagan1996neural">(Hagan et al. 1996)</span>.</p>
@@ -38,7 +257,7 @@
 <p>Nos anos seguintes, observou-se uma profusão de novas arquiteturas, que foram aprofundando-se na media em que a utilização de mais camadas ocultas fora possibilitadas pelos avanços no <em>hardware</em> computacional. Outras formas de organizar camadas sucessivas foram também introduzidas, além de vários avanços incrementais nos algoritmos de treinamento.</p>
 <h2 id="arquiteturas-proeminentes">Arquiteturas Proeminentes</h2>
 <h3 id="feed-forward">Feed-Forward</h3>
-<p>A arquitetura básica no campo das redes neurais artificiais é a chamada Feed-Forward, que consiste de várias camadas sucessivas, que são totalmente ligadas entre si por meio de pesos. Os impulsos recebidos pelas camadas mais baixas fluem sucessivamente para as camadas posteriores, como sugere a nomenclatura desta arquitetura. São uma generalização do Multilayer Perceptron na medida em que utilizam em geral uma gama mais vasta de funções de ativação, muitas delas de forma sigmoidal, como a função logística <span class="math inline">$y = \frac{1}{1 + e ^ {-x}}$</span> and the hyperbolic tangent <span class="math inline">$\tanh(x) = \frac{e^x − e^{-x}}{e^x + e^{-x}}$</span> <span class="citation" data-cites="goldberg2016primer">(Goldberg 2016)</span></p>
+<p>A arquitetura básica no campo das redes neurais artificiais é a chamada Feed-Forward, que consiste de várias camadas sucessivas, que são totalmente ligadas entre si por meio de pesos. Os impulsos recebidos pelas camadas mais baixas fluem sucessivamente para as camadas posteriores, como sugere a nomenclatura desta arquitetura. São uma generalização do Multilayer Perceptron na medida em que utilizam em geral uma gama mais vasta de funções de ativação, muitas delas de forma sigmoidal, como a função logística <span class="math inline">\(y = \frac{1}{1 + e ^ {-x}}\)</span> and the hyperbolic tangent <span class="math inline">\(\tanh(x) = \frac{e^x − e^{-x}}{e^x + e^{-x}}\)</span> <span class="citation" data-cites="goldberg2016primer">(Goldberg 2016)</span></p>
 <h3 id="redes-neurais-profundas">Redes Neurais Profundas</h3>
 <p>Com a melhoria do hardware, a topologia Feed-Forward foi ganhando um acréscimo de camadas, gerando as redes profundas (Deep Neural Networks). O aspecto mais importante dessa movimentação foi que as redes ganharam a habilidade de gerar representações sucessivas, abstraindo diferentes aspectos dos dados em cada uma de suas camadas.</p>
 <p>A grande vantagem desta topologia foi sua capacidade automática de extração de ‘features’, um trabalho que ficava a cargo dos pesquisadores anteriormente<span class="citation" data-cites="socher2014recursive">(Socher 2014)</span>. Em contrapartida, já forma como os dados são interpretados pela rede pode não ser facilmente inferida pelo pesquisador, e as redes podem assumir uma forte característica de caixa-preta.</p>
@@ -49,9 +268,9 @@
 <p>Trata-se de um tipo de arquitetura profunda, que é amplamente utilizado em problemas relacionados a imagens, atingindo resultados de ponta em várias áreas de visão de computadores (computer vision), como reconhecimento de objetos e rostos em imagens <span class="citation" data-cites="pang2017convolution">(Pang et al. 2017)</span>.</p>
 <p>Esse tipo de arquitetura lida com o problema da alta dimensão de uma imagem substituindo camadas totalmente conectadas por camadas convolucionais, que varrem a imagem, movimentando-se em uma de suas dimensões um passo por vez cada vez <span class="citation" data-cites="lecun1998gradient">(LeCun et al. 1998)</span>, e atualizando os pesos de acordo.</p>
 <p>Esse procedimento permite a geração, nas camadas convolucionais da rede, de uma só representação para padrões que aparecem em diferentes pontos da imagem; tais representações são geralmente interpretadas nas camadas finais da rede, totalmente conectadas, de forma a gerar o resultado final.</p>
-<h2 id="utilização-de-anns-em-áreas-correlatas">Utilização de ANNs em áreas correlatas</h2>
+<h2 id="utiliza&#xE7;&#xE3;o-de-anns-em-&#xE1;reas-correlatas">Utilização de ANNs em áreas correlatas</h2>
 <p>Poucos trabalhos investigam a utilização de redes neurais para a síntese sonora direta. Não obstantes, algumas das áreas correlatas são bastante exploradas, e podem oferecer insights interessantes.</p>
-<h3 id="reconhecimento-e-síntese-de-voz">Reconhecimento e Síntese de Voz</h3>
+<h3 id="reconhecimento-e-s&#xED;ntese-de-voz">Reconhecimento e Síntese de Voz</h3>
 <p><span class="citation" data-cites="hinton2012deep">(Hinton et al. 2012)</span> present an overview of the use of neural networks based approach in the field, while in this same year, <span class="citation" data-cites="graves2013speech">(Graves, Mohamed, and Hinton 2013)</span> produces state of the art results in the TIMIT phoneme recognition benchmark using a deep recurrent neural network, while <span class="citation" data-cites="maas2013rectifier">(Maas, Hannun, and Ng 2013)</span> points the superiority of rectifier nonlinearities over sigmodal activation functions in the task of continuous speech recognition.</p>
 <p>With a hybrid architecture, combining a recurrent phonetic model and a deep neural network acoustic classifier, <span class="citation" data-cites="boulanger2014phone">(Boulanger-Lewandowski et al. 2014)</span> applies phone sequencing strategies to set new benchmarks in the TIMIT dataset, a technique that is proved by <span class="citation" data-cites="sak2015fast">(Sak et al. 2015)</span> to be superior to architectures like deep long short-Term memory recurrent neural networks and the widely used hidden Markov models.</p>
 <p><span class="citation" data-cites="sainath2015deep">(Sainath et al. 2015)</span> investigates the optimization of convolutional nets hyperparameters, pooling and training strategies to applications in speech recognition tasks. <span class="citation" data-cites="zweig2017advances">(Zweig et al. 2017)</span> and <span class="citation" data-cites="zhang2017towards">(Ying Zhang et al. 2017)</span> investigates end-to-end systems, with the latter combining hierarchical convolutional nets with Connectionist Temporal Classification. In his work, <span class="citation" data-cites="zhang2017very">(Yu Zhang, Chan, and Jaitly 2017)</span> also explores end-to-end systems, via a very deep recurrent convolutional network employing NIN principles.</p>
@@ -73,7 +292,7 @@
 <p>Using a fuzzy neural network, <span class="citation" data-cites="wang2015image">(Wang and Gao 2015)</span> achieves superior speed, robustness and quality in lossy image processing tasks. <span class="citation" data-cites="toderici2015variable">(Toderici et al. 2015)</span> presents a progressive method, focused on reducing mobile phone data transfer, that allows arbitrary image quality depending on the quantity bits sent to the device. <span class="citation" data-cites="santurkar2017generative">(Santurkar, Budden, and Shavit 2017)</span> investigates the resilience of neural networks based compression, via a generative model capable of offering graceful degradation on the compressed images. Conceptual compressing is investigated by <span class="citation" data-cites="gregor2016towards">(Gregor et al. 2016)</span>, a technique that allows images to be retrieved from symbols. All the literature investigate deals with lossy compression.</p>
 <h3 id="imagem">Imagem</h3>
 <p>Recentemente tem-se visto esforços para adaptar métodos utilizados com sucesso na área de computer vision ao campo sonoro. O trabalho de <span class="citation" data-cites="engel2017neural">(Engel et al. 2017)</span>, por exemplo, busca inspiração na área de geração de imagens para elaborar uma arquitetura apropriada a síntese sonora. Ainda em paralelo com a área de relacionada à imagens, o autor propõe um base de dados sonora, Nsynth, à luz de datasets clássicos de imagens, como o MNIST.</p>
-<h4 id="síntese">Síntese</h4>
+<h4 id="s&#xED;ntese">Síntese</h4>
 <p><span class="citation" data-cites="isola2016image">(Isola et al. 2016)</span> presents a method to translate images via an adversarial network, generating images from outlines, for example, or providing automatic image colorization <span class="citation" data-cites="hwangimage">(Hwang and Zhou 2016)</span>, <span class="citation" data-cites="zhang2016colorful">(Zhang, Isola, and Efros 2016)</span>, <span class="citation" data-cites="larsson2016learning">(Larsson, Maire, and Shakhnarovich 2016)</span> and <span class="citation" data-cites="iizuka2016let">(Iizuka, Simo-Serra, and Ishikawa 2016)</span>, the last focusing on automatic image colorization via a convolutional network, based on the extraction of local and global features, learned in the supervised training process.</p>
 <p>Also using adversarial nets, <span class="citation" data-cites="frans2017outline">(Frans 2017)</span> introduces control to the process of generating coloured images from sketches, with the use of colour maps fed into the , a concept that is further explored in <span class="citation" data-cites="sangkloy2016scribbler">(Sangkloy et al. 2016)</span>, where user interaction and a feed-forward architecture enables real-time colorization of images via the input of colour clues via scribbles in arbitrary areas of the image.</p>
 <p><span class="citation" data-cites="gatys2016image">(Gatys, Ecker, and Bethge 2016)</span> tackles the problem of style transfer: extracting features of an image and applying to another one, without changing the semantics of the latter, with the application of a convolutional network.</p>
@@ -82,104 +301,107 @@
 <p><span class="citation" data-cites="theis2015generative">(Theis and Bethge 2015)</span> investigates a recurrent architecture composed of multi-dimensional long short term memory units in the context of modelling image distributions.</p>
 <h4 id="video">Video</h4>
 <p>Problems in this area can be understood as a general case of aforementioned image-related tasks, with the added complexity of taking advantage of temporal correlations and a much higher data dimensionality. Motivated by this, <span class="citation" data-cites="karpathy2014large">(Karpathy et al. 2014)</span> investigates approaches capable of extending convolutional neural networks in order to enable them to take advantage of temporal information in the inputted data. In a similar attempt, extending facial expression recognition to videos, <span class="citation" data-cites="khorrami2016deep">(Khorrami et al. 2016)</span> merges convolutional and recurrent networks, measuring the relative relevance of each one in the final results. Tackling the curse of dimensionality, <span class="citation" data-cites="Yang2017">(Yang, Krompass, and Tresp 2017)</span> presents the tensor-train concept, enabling the transfer of improvements of other architectures to high dimensional sequential data. <span class="citation" data-cites="he2015multimodal">(He et al. 2015)</span> uses a deep bidirectional long short-term memory recurrent neural net to set benchmarks in the recognition of emotions, via audio and video processing.</p>
-<h2 id="o-estado-da-arte-da-síntese-sonora-em-tempo-real">O Estado da Arte da Síntese Sonora em Tempo Real</h2>
+<h2 id="o-estado-da-arte-da-s&#xED;ntese-sonora-em-tempo-real">O Estado da Arte da Síntese Sonora em Tempo Real</h2>
 <p>A área de síntese sonora propriamente pode ser dividida em duas escolas, na medida em que ocupa-se em modelar os processos físicos que dão origem aos som (physical modelling) ou diretamente as características das ondas sonoras (spectral modelling)<span class="citation" data-cites="serra2007state">(Serra 2007)</span>.</p>
 <p>Dessas escolas, a modelagem física é, de longe, a mais proeminente tanto do ponto de vista da pesquisa quanto de aplicações; a área de modelagem espectral parece ter despertado pouco interesse dos pesquisadores nas últimas duas décadas, encontrando a maioria de suas aplicações recentes em áreas fora da síntese musical.</p>
 <p>A modelagem física ocupa-se majoritariamente em formular modelos discretos baseados na solução de D’alembert para a equação da onda<span class="citation" data-cites="karjalainen2004digital">(Karjalainen and Erkut 2004)</span>, incorporando ao modelo outros termos, como termos oriundos da rigidez das cordas, que modelem características relevantes ao timbre do instrumento que deseja-se representar<span class="citation" data-cites="bensa2003simulation">(Bensa et al. 2003)</span>. Destacam-se, nessa escola, duas abordagens: o método das diferenças finitas, mais acurado e computacionalmente intensivo, e os <em>Digital Waveguides</em>, um modelo bastante eficiente<span class="citation" data-cites="bensa2005computational">(Bensa et al. 2005)</span> e elegante que é, talvez, o mais utilizado para a emulação em tempo real de instrumentos acústicos.</p>
-<h3 id="método-das-diferenças-finitas-finite-difference">Método das Diferenças Finitas (Finite difference)</h3>
+<h3 id="m&#xE9;todo-das-diferen&#xE7;as-finitas-finite-difference">Método das Diferenças Finitas (Finite difference)</h3>
 <p>O método consiste na resolução da equação da onda propagando-se em uma corda ideal, introduzida abaixo e derivada com mais detalhes na seção seguinte.</p>
-<p><br /><span class="math display">$$\frac{\partial^2 y(x,t)}{\partial t^2} =\frac{T}{\rho} \frac{\partial^2 y(x,t)}{\partial x^2}$$</span><br /></p>
-<p>A solução é buscada para pontos em um <em>grid</em> obtido discretizando-se tanto o tempo <span class="math inline"><em>t</em></span> quanto a posição horizontal <span class="math inline"><em>x</em></span>. Isso permite a aproximação das derivadas parciais de segunda ordem pelo método das diferenças centrais. Assim procedendo, podemos reescrever a equação da onda como abaixo.</p>
-<p><br /><span class="math display">$$\frac{y[i,j+1]-2y[i,j]+y[i,j-1]}{\Delta t^2} = c^2 \frac{y[i+1,j]-2y[i,j]+y[i-1,j]}{\Delta x^2}$$</span><br /></p>
+<p><span class="math display">\[\frac{\partial^2 y(x,t)}{\partial t^2} =\frac{T}{\rho} \frac{\partial^2 y(x,t)}{\partial x^2}\]</span></p>
+<p>A solução é buscada para pontos em um <em>grid</em> obtido discretizando-se tanto o tempo <span class="math inline">\(t\)</span> quanto a posição horizontal <span class="math inline">\(x\)</span>. Isso permite a aproximação das derivadas parciais de segunda ordem pelo método das diferenças centrais. Assim procedendo, podemos reescrever a equação da onda como abaixo.</p>
+<p><span class="math display">\[\frac{y[i,j+1]-2y[i,j]+y[i,j-1]}{\Delta t^2} = c^2 \frac{y[i+1,j]-2y[i,j]+y[i-1,j]}{\Delta x^2}\]</span></p>
 <p>onde</p>
-<p><span class="math inline">$c=\sqrt{\frac{T}{\rho}}$</span></p>
-<p><span class="math inline"><em>x</em><sub><em>i</em></sub> = <em>i</em><em>Δ</em><em>x</em>, <em>i</em> ∈ {0, 1, ..., <em>M</em>}</span></p>
-<p><span class="math inline"><em>t</em><sub><em>j</em></sub> = <em>j</em><em>Δ</em><em>t</em>, <em>j</em> ∈ {0, 1, ..., <em>N</em>}</span></p>
-<p>e, colocando <span class="math inline"><em>y</em>[<em>i</em>, <em>j</em> + 1]</span> em evidência:</p>
-<p><br /><span class="math display"><em>y</em>[<em>i</em>, <em>j</em> + 1] = 2<em>y</em>[<em>i</em>, <em>j</em>] − <em>y</em>[<em>i</em>, <em>j</em> − 1] + <em>C</em><sup>2</sup>(<em>y</em>[<em>i</em> + 1, <em>j</em>] − 2<em>y</em>[<em>i</em>, <em>j</em>] + <em>y</em>[<em>i</em> − 1, <em>j</em>])</span><br /></p>
-<p>onde foram aglutinados em <span class="math inline">$C=c \frac{\Delta t}{\Delta x}$</span>, denominado número de Courant, todos os parâmetros que governam a qualidade da simulação. Para garantir sua estabilidade, os parametros devem ser fixados de modo que <span class="math inline"><em>C</em></span> seja menor que 1.</p>
-<p>Repare que $ y[i,j+1]$ é calculado com base no ultimo e penultimo momentos discretos, o que demanda, para o primeiro passo da simulação em <span class="math inline"><em>j</em> = 1</span>, a definição do estado do sistema em <span class="math inline"><em>j</em> = 0</span>, que é seu estado inicial, e informações sobre o sistema no momento discreto <span class="math inline"><em>j</em> =  − 1</span>, que é indefinido.</p>
-<p>Como condições de contorno para o caso contínuo temos que, no momento inicial, a corda encontra-se apenas deslocada do seu equilíbrio. Portanto, a velocidade em <span class="math inline"><em>t</em> = <em>j</em> = 0</span>, para qualquer ponto <span class="math inline"><em>x</em></span> da corda, tem valor zero. Ademais, a corda encontra-se fixa em suas extremidades <span class="math inline"><em>x</em> = 0</span> e <span class="math inline"><em>x</em> = <em>L</em></span>. Para primeira condição podemos escrever:</p>
-<p><br /><span class="math display">$$ \frac{\partial y(x,t)}{\partial t} \approx \frac{y[i,1]-y[i,-1]}{2 \Delta t} = 0 ~ \forall ~ i \in \{0,1,...,M\} $$</span><br /></p>
+<p><span class="math inline">\(c=\sqrt{\frac{T}{\rho}}\)</span></p>
+<p><span class="math inline">\(x_i = i \Delta x, i \in \{0,1,...,M\}\)</span></p>
+<p><span class="math inline">\(t_j = j \Delta t, j \in \{0,1,...,N\}\)</span></p>
+<p>e, colocando <span class="math inline">\(y[i,j+1]\)</span> em evidência:</p>
+<p><span class="math display">\[ y[i,j+1] = 2 y[i, j] - y[i,j-1] + C^2 (y[i+1, j] - 2 y[i, j] + y[i-1, j])\]</span></p>
+<p>onde foram aglutinados em <span class="math inline">\(C=c \frac{\Delta t}{\Delta x}\)</span>, denominado número de Courant, todos os parâmetros que governam a qualidade da simulação. Para garantir sua estabilidade, os parametros devem ser fixados de modo que <span class="math inline">\(C\)</span> seja menor que 1.</p>
+<p>Repare que $ y[i,j+1]$ é calculado com base no ultimo e penultimo momentos discretos, o que demanda, para o primeiro passo da simulação em <span class="math inline">\(j = 1\)</span>, a definição do estado do sistema em <span class="math inline">\(j=0\)</span>, que é seu estado inicial, e informações sobre o sistema no momento discreto <span class="math inline">\(j=-1\)</span>, que é indefinido.</p>
+<p>Como condições de contorno para o caso contínuo temos que, no momento inicial, a corda encontra-se apenas deslocada do seu equilíbrio. Portanto, a velocidade em <span class="math inline">\(t=j=0\)</span>, para qualquer ponto <span class="math inline">\(x\)</span> da corda, tem valor zero. Ademais, a corda encontra-se fixa em suas extremidades <span class="math inline">\(x=0\)</span> e <span class="math inline">\(x=L\)</span>. Para primeira condição podemos escrever:</p>
+<p><span class="math display">\[ \frac{\partial y(x,t)}{\partial t} \approx \frac{y[i,1]-y[i,-1]}{2 \Delta t} = 0 ~ \forall ~ i \in \{0,1,...,M\} \]</span></p>
 <p>o que implica:</p>
-<p><br /><span class="math display"><em>y</em>[<em>i</em>, 1] = <em>y</em>[<em>i</em>,  − 1] ∀ <em>i</em> ∈ {0, 1, ..., <em>M</em>}</span><br /></p>
-<p>Assim, para o primeiro momento da simulação em <span class="math inline"><em>j</em> = 1</span> podemos substituir <span class="math inline"><em>y</em>[<em>i</em>,  − 1]</span> por <span class="math inline"><em>y</em>[<em>i</em>, 1]</span>:</p>
-<p><br /><span class="math display">$$ y[i,j+1] = y[i, j] + \frac{1}{2} C^2 (y[i+1, j] - 2 y[i, j] + y[i-1, j])$$</span><br /></p>
+<p><span class="math display">\[ y[i,1] = y[i,-1] ~ \forall ~ i \in \{0,1,...,M\} \]</span></p>
+<p>Assim, para o primeiro momento da simulação em <span class="math inline">\(j=1\)</span> podemos substituir <span class="math inline">\(y[i,-1]\)</span> por <span class="math inline">\(y[i,1]\)</span>:</p>
+<p><span class="math display">\[ y[i,j+1] = y[i, j] + \frac{1}{2} C^2 (y[i+1, j] - 2 y[i, j] + y[i-1, j])\]</span></p>
 <h3 id="digital-waveguides">Digital Waveguides</h3>
 <p>Apresentam uma abordagem simplificada da modelagem física, na medida em que concentram em alguns pontos discretos os calculos necessários à simulação, aumentando bastante a eficiência computacional do modelo. Conceitualmente, podem ser vistos como uma caso especial do método das diferenças finitas, e a maioria de suas implementações consistem na utilização de <em>delay lines</em> e filtros digitais para a modelagem da propagação da onda<span class="citation" data-cites="smith2006basic">(Smith 2006)</span>.</p>
-<p>Se considerarmos, por exemplo, um framerate típico de 44100 frames por segundo podemos evitar desperdício computacional fazendo com que a simulação conincida com o intervalos 1/44100 entre os <em>samples</em>. De modo geral, levando em conta que <span class="math inline"><em>C</em> &lt;  = 1</span>, podemos parametrizar a simulação em termos dos componentes físicos e o <em>sampling rate</em> desejado da seguinte forma:</p>
-<p><span class="math inline">$dt = \frac{1}{FPS} = \frac{D}{N}$</span> <span class="math inline"><em>N</em> = <em>D</em> <em>F</em><em>P</em><em>S</em></span> <span class="math inline">$dx = \frac{L}{M}$</span> <span class="math inline">$M &lt;= \frac{FPS}{2f}$</span> <span class="math inline"><em>c</em> = 2<em>f</em><em>L</em></span></p>
-<p>onde <span class="math inline"><em>D</em></span> é a duração desejada, em segundos; <span class="math inline"><em>L</em></span> é o comprimento da corda, em metros e FPS é o <em>framerate</em> pretendido.</p>
-<h1 id="referencial-teórico">Referencial Teórico</h1>
-<h2 id="acústica-e-psicoacústica">Acústica e Psicoacústica</h2>
+<p>Se considerarmos, por exemplo, um framerate típico de 44100 frames por segundo podemos evitar desperdício computacional fazendo com que a simulação conincida com o intervalos 1/44100 entre os <em>samples</em>. De modo geral, levando em conta que <span class="math inline">\(C &lt;= 1\)</span>, podemos parametrizar a simulação em termos dos componentes físicos e o <em>sampling rate</em> desejado da seguinte forma:</p>
+<p><span class="math inline">\(dt = \frac{1}{FPS} = \frac{D}{N}\)</span> <span class="math inline">\(N = D ~ FPS\)</span> <span class="math inline">\(dx = \frac{L}{M}\)</span> <span class="math inline">\(M &lt;= \frac{FPS}{2f}\)</span> <span class="math inline">\(c = 2fL\)</span></p>
+<p>onde <span class="math inline">\(D\)</span> é a duração desejada, em segundos; <span class="math inline">\(L\)</span> é o comprimento da corda, em metros e FPS é o <em>framerate</em> pretendido.</p>
+<h1 id="referencial-te&#xF3;rico">Referencial Teórico</h1>
+<h2 id="ac&#xFA;stica-e-psicoac&#xFA;stica">Acústica e Psicoacústica</h2>
 <h2 id="ferramentas-e-frameworks">Ferramentas e Frameworks</h2>
 <p>A área de machine learning encontra-se muito ativa atualmente, tanto no âmbito da pesquisa quanto no empresarial, com várias grandes empresas de tecnologia incorporando essa tecnologia em suas competências essenciais. Dessa forma, assistimos à uma proliferação de ferramentas e frameworks focados em diferentes aspectos da área, muitos deles desenvolvidos ou endossados por essas empresas, como Microsoft, Google e Amazon. Somando-se a isso o fato de que, em maior ou menor grau, todos eles apresentam uma curva de aprendizado significativa, fica evidente que uma comparação direta de todos, ou mesmo da maioria das ferramentas disponíveis, torna-se impraticável em um horizonte de tempo razoável.</p>
 <p>A literatura disponível sobre o tema é bastante escassa, talvez pela volatilidade do tema.</p>
-<!-- ## Algoritmos de Otimização -->
 <h2 id="transformada-discreta-de-fourier">Transformada Discreta de Fourier</h2>
 <p>A transformada de Fourier, em sua forma contínua, é um tipo de transformada integral, como abaixo:</p>
-<p><br /><span class="math display"><em>X</em>(<em>f</em>) = ℱ(<em>x</em>(<em>t</em>)) = ∫<sub> − ∞</sub><sup>∞</sup><em>x</em>(<em>t</em>)<em>e</em><sup> − 2<em>π</em><em>f</em><em>t</em> <em>i</em></sup><em>d</em><em>t</em></span><br /></p>
-<p><br /><span class="math display"><em>x</em>(<em>t</em>) = ℱ<sup> − 1</sup>(<em>X</em>(<em>f</em>)) = ∫<sub> − ∞</sub><sup>∞</sup><em>X</em>(<em>f</em>)<em>e</em><sup>2<em>π</em><em>f</em><em>t</em> <em>i</em></sup><em>d</em><em>f</em></span><br /></p>
+<p><span class="math display">\[
+X(f) = \mathcal{F}(x(t))=\int_{-\infty}^\infty x(t) e^{- 2 \pi f t \ i} dt
+\]</span></p>
+<p><span class="math display">\[
+x(t) = \mathcal{F}^{-1}(X(f))=\int_{-\infty}^\infty X(f) e^{2 \pi f t \ i} df
+\]</span></p>
 <p>Tendo sido formulada por Fourier, enquanto investigava o fenômeno da transferência de calor <strong>xxx</strong>, trata-se de uma das ferramentas mais utilizadas na investigação de sistemas físicos <span class="citation" data-cites="lyons2011understanding">(Lyons 2011)</span>, sendo de especial importância no campo de processamento de sinais <strong>xxx</strong>.</p>
-<p>Esta ferramenta permite que a descrição de um sinal <span class="math inline"><em>x</em>(<em>t</em>)</span>, em relação ao tempo, seja transformada em uma representação deste mesmo sinal no domínio da frequência, na forma <span class="math inline"><em>X</em>(<em>f</em>)</span>; <span class="math inline"><em>x</em>(<em>t</em>)</span> e <span class="math inline"><em>X</em>(<em>f</em>)</span> são denominados um par de Fourier.</p>
+<p>Esta ferramenta permite que a descrição de um sinal <span class="math inline">\(x(t)\)</span>, em relação ao tempo, seja transformada em uma representação deste mesmo sinal no domínio da frequência, na forma <span class="math inline">\(X(f)\)</span>; <span class="math inline">\(x(t)\)</span> e <span class="math inline">\(X(f)\)</span> são denominados um par de Fourier.</p>
 <p>Com o advento dos computadores, e a emergência de sinais digitais, uma versão discreta foi formulada <strong>xxx</strong>, e pode ser definida como abaixo:</p>
-<p><br /><span class="math display">$$
+<p><span class="math display">\[
 X[m] =\sum_{n=0}^{N-1} x[n] e^{- 2 \pi m n / N ~ i}
-$$</span><br /> <br /><span class="math display">$$
+\]</span> <span class="math display">\[
 x[n] = \frac{1}{N}\sum_{m=0}^{N-1} X[m] e^{2 \pi m n / N ~ i}
-$$</span><br /></p>
-<p>onde <span class="math inline"><em>x</em></span> e <span class="math inline"><em>X</em></span> são sequências de N números complexos. Utilizando a fórmula de Euler, <span class="math inline"><em>e</em><sup><em>x</em> <em>i</em></sup> = cos (<em>x</em>) + sin (<em>x</em>) <em>i</em></span>, podemos alterar a definição acima, da forma exponencial, para a trigonométrica, reorganizando o expoente de forma a evidenciar algumas características importantes, na forma abaixo.</p>
-<p><br /><span class="math display">$$
+\]</span></p>
+<p>onde <span class="math inline">\(x\)</span> e <span class="math inline">\(X\)</span> são sequências de N números complexos. Utilizando a fórmula de Euler, <span class="math inline">\(e^{x ~ i} = \cos(x) + \sin(x)~i\)</span>, podemos alterar a definição acima, da forma exponencial, para a trigonométrica, reorganizando o expoente de forma a evidenciar algumas características importantes, na forma abaixo.</p>
+<p><span class="math display">\[
 X[m] =\sum_{n=0}^{N-1}
 x[n] \cos \left(m ~ \frac{2 \pi}{N} ~ n \right)-
 x[n] \sin\left(m ~ \frac{2 \pi}{N} ~ n \right) ~ i
-$$</span><br /></p>
-<p>A forma acima torna mais fácil uma interpretação geométrica do algoritmo. Para cada valor de <span class="math inline"><em>m</em> ∈ 0, 1, 2, ..., <em>N</em> − 1</span> é feita a multiplicação, elemento a elemento, das N posições do impulso <span class="math inline"><em>x</em></span> com N posições de um onda em forma de cosseno (<span class="math inline"><em>C</em>(<em>m</em>)</span>), pura, de “frequência” m, na parte real da equação. Analogamente, em sua parte imaginária, o mesmo processo ocorre: cada posição medida do impulso <span class="math inline"><em>x</em></span> também é multiplicada pela posição equivalente, desta vez, de uma onda em formato de seno(<span class="math inline"><em>S</em>(<em>m</em>)</span>), com “frequência” m.</p>
-<p>Note-se que esta “frequência”, e por isso a insistência nas aspas, refere-se a quantos ciclos das ondas (<span class="math inline"><em>C</em>(<em>m</em>)</span>) e (<span class="math inline"><em>S</em>(<em>m</em>)</span>) acima definidas estão contidos no espaço dos N pontos utilizados na transformada e não pode, per-se, ser relacionada à frequência física da onda.</p>
-<p>Para o caso de sinais que, no domínio do tempo, consistem de uma sequência finita de números reais, que são os considerados neste trabalho, pode-se, à luz da definição acima, derivar uma interessante e útil propriedade do algoritmo: A descrição do sinal no domínio da frequência é simétrica, de forma que <span class="math inline"><em>X</em>[<em>m</em>] = <em>X</em><sup>*</sup>[<em>N</em> − <em>m</em>]</span>, com $X^* $ denotando o conjugado complexo de <span class="math inline"><em>X</em></span>. Dessa forma, sendo <span class="math inline"><em>N</em></span> par, precisamos de apenas de <span class="math inline"><em>N</em>/2 + 1</span> termos de <span class="math inline"><em>X</em>[<em>m</em>]</span> para descrever completamente o pulso no domínio da frequência, enquanto <span class="math inline">(<em>N</em> + 1)/2</span> são suficientes caso <span class="math inline"><em>N</em></span> seja ímpar. A imagem abaixo ilustra este processo.</p>
+\]</span></p>
+<p>A forma acima torna mais fácil uma interpretação geométrica do algoritmo. Para cada valor de <span class="math inline">\(m ~ \in ~ {0,1,2,...,N-1}\)</span> é feita a multiplicação, elemento a elemento, das N posições do impulso <span class="math inline">\(x\)</span> com N posições de um onda em forma de cosseno (<span class="math inline">\(C(m)\)</span>), pura, de “frequência” m, na parte real da equação. Analogamente, em sua parte imaginária, o mesmo processo ocorre: cada posição medida do impulso <span class="math inline">\(x\)</span> também é multiplicada pela posição equivalente, desta vez, de uma onda em formato de seno(<span class="math inline">\(S(m)\)</span>), com “frequência” m.</p>
+<p>Note-se que esta “frequência”, e por isso a insistência nas aspas, refere-se a quantos ciclos das ondas (<span class="math inline">\(C(m)\)</span>) e (<span class="math inline">\(S(m)\)</span>) acima definidas estão contidos no espaço dos N pontos utilizados na transformada e não pode, per-se, ser relacionada à frequência física da onda.</p>
+<p>Para o caso de sinais que, no domínio do tempo, consistem de uma sequência finita de números reais, que são os considerados neste trabalho, pode-se, à luz da definição acima, derivar uma interessante e útil propriedade do algoritmo: A descrição do sinal no domínio da frequência é simétrica, de forma que <span class="math inline">\(X[m] = X^* [N-m]\)</span>, com $X^* $ denotando o conjugado complexo de <span class="math inline">\(X\)</span>. Dessa forma, sendo <span class="math inline">\(N\)</span> par, precisamos de apenas de <span class="math inline">\(N/2+1\)</span> termos de <span class="math inline">\(X[m]\)</span> para descrever completamente o pulso no domínio da frequência, enquanto <span class="math inline">\((N+1)/2\)</span> são suficientes caso <span class="math inline">\(N\)</span> seja ímpar. A imagem abaixo ilustra este processo.</p>
 <figure>
-<img src="im/fourier.png" alt="Transformada Discreta de Fourier" /><figcaption>Transformada Discreta de Fourier</figcaption>
+<img src="im/fourier.png" alt="Transformada Discreta de Fourier"><figcaption>Transformada Discreta de Fourier</figcaption>
 </figure>
 <p>Trata-se de uma transformada de uma onda composta por 8 samples, que pode ser vista no retangulo inferior da imagens. Os outros retangulos ilustram os respectivos passos e a simetria entre passos equidistantes de n/2. O motivo da simetria, causado pela perda de informação ao tomar apenas alguns pontos, torna-se explícito quando observado do ponto de vista geométrico: os 8 pontos equidistantes tomados como amostra, por exemplo, de uma senoide com frequência igual a 2 coincidem com os retirados de uma senois com frequência igual a 6, já que partes do ciclo são ignorados.</p>
 <p>O código em Python a seguir, utilizado para gerar os frames da imagem acima, serve para elucidar numericamente o exposto. É interessante notar que a interpretação geométrica da simetria da transformada discreta de Fourier em ondas puramente reais, até onde alcança o conhecimento do autor, é apresentada pela primeira vez neste trabalho. Cabe observar que implementações mais eficientes, como o algoritmo Fast Fourier Transform (FFT), que os são utilizadas na prática, se utilizam da simetria da transformada para economizar operações <strong>xxx</strong>.</p>
-<pre><code>import numpy as np
+<pre class="language-text">import numpy as np
 import matplotlib.pyplot as plt
 from scipy.fftpack import fft
 
-# Discrete Fourier Transform | Transformada Discreta de Fourier
+# Discrete Fourier Transform | Transformada Discreta de Fourier {#discrete-fourier-transform-transformada-discreta-de-fourier }
 def DFT(x):
   N = x.shape[0]
   # cria um vetor de N entradas complexas, preenchido com zeros
-  X = np.zeros(N, dtype=&#39;complex64&#39;)
+  X = np.zeros(N, dtype=&#x27;complex64&#x27;)
   n = np.array([p for p in range(N)]) # n = {0,1,2,...,N-1}
   # Versão de &quot;alta resolução&quot; de n, usada para o gráfico apenas
   Hn = np.linspace(0, N-1, 100*N) # Hn ={0,...,1,...,2,...,N-1}
   for m in range(N): # m E {0,1,2,...,N-1}
-    C_Si = np.exp(-2 * np.pi * m * n / N * 1j) # C(m) - S(m) i
+    C_Si = np.exp(-2 * np.pi * m * n &#x2F; N * 1j) # C(m) - S(m) i
     # Versão de &quot;alta resolução&quot; de C_Si, usada para o gráfico apenas
-    HC_Si = np.exp(-2 * np.pi * m * Hn / N * 1j)
+    HC_Si = np.exp(-2 * np.pi * m * Hn &#x2F; N * 1j)
     X[m] = sum(np.multiply(x, C_Si)) # multiplicação termo a termo
     # plotando:
     plt.figure(1)
-    plt.suptitle(&#39;M =&#39; + str(m), fontsize=16)
+    plt.suptitle(&#x27;M =&#x27; + str(m), fontsize=16)
     plt.subplot(211)
-    plt.plot(n,x[n].real, &#39;k:.&#39;, label=&#39;x[n]&#39;)
-    plt.plot(n,C_Si.real, &#39;k--o&#39;, label=&#39;C[n]&#39;)
-    plt.plot(Hn,HC_Si.real, &#39;k-&#39;,label=&#39;C[n] ideal&#39;)
-    plt.ylabel(&#39;Real&#39;, fontsize=14, color=&#39;k&#39;)    
+    plt.plot(n,x[n].real, &#x27;k:.&#x27;, label=&#x27;x[n]&#x27;)
+    plt.plot(n,C_Si.real, &#x27;k--o&#x27;, label=&#x27;C[n]&#x27;)
+    plt.plot(Hn,HC_Si.real, &#x27;k-&#x27;,label=&#x27;C[n] ideal&#x27;)
+    plt.ylabel(&#x27;Real&#x27;, fontsize=14, color=&#x27;k&#x27;)    
     plt.subplot(212)
-    plt.plot(n,x[n].imag, &#39;k:.&#39;, label=&#39;x[n]&#39;)
-    plt.plot(n,C_Si.imag, &#39;k--o&#39;, label=&#39;C[n]&#39;)
-    plt.plot(Hn,HC_Si.imag, &#39;k-&#39;,label=&#39;C[n] ideal&#39;)
-    plt.ylabel(&#39;Imaginário&#39;, fontsize=14, color=&#39;k&#39;)
+    plt.plot(n,x[n].imag, &#x27;k:.&#x27;, label=&#x27;x[n]&#x27;)
+    plt.plot(n,C_Si.imag, &#x27;k--o&#x27;, label=&#x27;C[n]&#x27;)
+    plt.plot(Hn,HC_Si.imag, &#x27;k-&#x27;,label=&#x27;C[n] ideal&#x27;)
+    plt.ylabel(&#x27;Imaginário&#x27;, fontsize=14, color=&#x27;k&#x27;)
     plt.legend()
-    plt.savefig(&#39;0&#39; + str(m) + &#39;.png&#39;, dpi=150)
-    plt.close(&#39;all&#39;)
+    plt.savefig(&#x27;0&#x27; + str(m) + &#x27;.png&#x27;, dpi=150)
+    plt.close(&#x27;all&#x27;)
   #calcula o erro em relação ao algoritmo da biblioteca Scipy
   error = sum((X-fft(x))**2)
   print(round(error,5))
   # retorna a parte não redundante da transformada
-  return X[0 : int(N/2+1)] if (N % 2 == 0) else X[0 : int((N+1)/2)]
+  return X[0 : int(N&#x2F;2+1)] if (N % 2 == 0) else X[0 : int((N+1)&#x2F;2)]
 
 def s(t):
   return np.cos(2 * np.pi * t)
@@ -188,93 +410,96 @@ t = np.linspace(0, 1, 8) # 8 pontos entre 0 e 1
 x = s(t) # aplica a função ponto a ponto
 X = DFT(x)
 
-# plotando:
+# plotando: {#plotando }
 plt.figure(1)
 plt.subplot(211)
-plt.ylabel(&#39;Real&#39;, fontsize=14, color=&#39;k&#39;)
-plt.stem(X.real,linefmt=&#39;k--&#39;,markerfmt=&#39;ko&#39;, basefmt=&#39;k--&#39;)
+plt.ylabel(&#x27;Real&#x27;, fontsize=14, color=&#x27;k&#x27;)
+plt.stem(X.real,linefmt=&#x27;k--&#x27;,markerfmt=&#x27;ko&#x27;, basefmt=&#x27;k--&#x27;)
 plt.subplot(212)
-plt.stem(X.imag,linefmt=&#39;k--&#39;,markerfmt=&#39;ks&#39;, basefmt=&#39;k--&#39;)
-plt.ylabel(&#39;Imaginário&#39;, fontsize=14, color=&#39;k&#39;)
-plt.savefig(&#39;transform.png&#39;, dpi=150)
-plt.close(&#39;all&#39;)</code></pre>
-<h2 id="a-equação-da-onda">A Equação da Onda</h2>
+plt.stem(X.imag,linefmt=&#x27;k--&#x27;,markerfmt=&#x27;ks&#x27;, basefmt=&#x27;k--&#x27;)
+plt.ylabel(&#x27;Imaginário&#x27;, fontsize=14, color=&#x27;k&#x27;)
+plt.savefig(&#x27;transform.png&#x27;, dpi=150)
+plt.close(&#x27;all&#x27;)</pre>
+<h2 id="a-equa&#xE7;&#xE3;o-da-onda">A Equação da Onda</h2>
 <p>A equação diferencial que descreve o movimento de uma onda em duas dimensões pode ser derivada a partir das leis de Newton, assumindo algumas simplificações. Considerando a imagem abaixo, e as variáveis que a seguem.</p>
 <figure>
-<img src="im/waveequation.png" alt="Representação de um segmento de corda" /><figcaption>Representação de um segmento de corda</figcaption>
+<img src="im/waveequation.png" alt="Representa&#xE7;&#xE3;o de um segmento de corda"><figcaption>Representação de um segmento de corda</figcaption>
 </figure>
-<p><span class="math inline"><em>y</em>(<em>x</em>, <em>t</em>)</span> a distância entre um ponto qualquer de uma corda e o eixo horizontal no tempo <span class="math inline"><em>t</em></span> e na posição <span class="math inline"><em>x</em></span>;</p>
-<p><span class="math inline"><em>θ</em>(<em>x</em>, <em>t</em>)</span> o angulo entre a tangente da corda na posição <span class="math inline"><em>x</em></span> e no momento <span class="math inline"><em>t</em></span> e a direção horizontal;</p>
-<p><span class="math inline"><em>T⃗</em>(<em>x</em>, <em>t</em>)</span> o vetor representando a tensão na corda, no ponto <span class="math inline"><em>x</em></span> e no momento <span class="math inline"><em>t</em></span>;</p>
+<p><span class="math inline">\(y(x,t)\)</span> a distância entre um ponto qualquer de uma corda e o eixo horizontal no tempo <span class="math inline">\(t\)</span> e na posição <span class="math inline">\(x\)</span>;</p>
+<p><span class="math inline">\(\theta(x,t)\)</span> o angulo entre a tangente da corda na posição <span class="math inline">\(x\)</span> e no momento <span class="math inline">\(t\)</span> e a direção horizontal;</p>
+<p><span class="math inline">\(\vec{T}(x,t)\)</span> o vetor representando a tensão na corda, no ponto <span class="math inline">\(x\)</span> e no momento <span class="math inline">\(t\)</span>;</p>
 <p>Assumindo ainda que qualquer ponto da corda move-se somente na posição vertical temos que a resultante das forças é também vertical, e pode ser descrita como:</p>
-<p><br /><span class="math display">$$F(x,t) = T(x + dx,t)\sin(\theta + d\theta) - T(x,t)\sin(\theta) = \\
-T(x + dx,t)\cos(\theta + d\theta) \tan(\theta + d\theta) - T(x,t)\cos(\theta)\tan(\theta)$$</span><br /></p>
-<p>assumindo pequenos deslocamentos verticais da corda em relação à sua posição de equilíbrio, temos que <span class="math inline"><em>θ</em> ≪ 1</span> e, portanto <span class="math inline">cos (<em>θ</em> + <em>d</em><em>θ</em>) ≈ cos (<em>θ</em>) ≈ 1</span>.</p>
+<p><span class="math display">\[F(x,t) = T(x + dx,t)\sin(\theta + d\theta) - T(x,t)\sin(\theta) = \\
+T(x + dx,t)\cos(\theta + d\theta) \tan(\theta + d\theta) - T(x,t)\cos(\theta)\tan(\theta)\]</span></p>
+<p>assumindo pequenos deslocamentos verticais da corda em relação à sua posição de equilíbrio, temos que <span class="math inline">\(\theta \ll 1\)</span> e, portanto <span class="math inline">\(\cos(\theta + d\theta) \approx \cos(\theta) \approx 1\)</span>.</p>
 <p>Além disso, lembrando que as tangentes podem ser escritas como a derivada parcial da função de deslocamento em relação à posição, temos:</p>
-<p><br /><span class="math display">$$F(x,t) = T(x+d x, t) \left(\frac{\partial y(x+d x)}{\partial x}\right) - T(x, t) \left(\frac{\partial y(x)}{\partial x}\right)$$</span><br /></p>
-<p>Assumindo tensão uniforme e invariável em toda a extensão da corda, condições bastante razoáveis no contexto de instrumentos musicais, podemos escrever <span class="math inline"><em>T</em>(<em>x</em> + <em>d</em><em>x</em>, <em>t</em>) = <em>T</em>(<em>x</em>, <em>t</em>) = <em>T</em></span> e <span class="math inline"><em>F</em>(<em>x</em>, <em>t</em>)</span> toma a forma $ T ( - )$, quando colocamos <span class="math inline"><em>T</em></span> em evidência. Se assumirmos que a massa do segmento infinitesimal da corda pode ser escrita na forma <span class="math inline"><em>ρ</em><em>d</em><em>x</em></span>, onde <span class="math inline"><em>ρ</em></span> é a massa da corda por unidade de comprimento e <span class="math inline">$dx \approx \sqrt{dx^2+dy^2}$</span> para oscilações pequenas, aplicando a segunda lei de Newton para força resultante na corda temos $F(x,t) = dx  $.</p>
-<p>Assim, temos $T ( - ) = dx  $ que podemos reorganizar como <span class="math inline">$\frac{\partial^2 y}{\partial t^2} = \frac{T}{\rho} \frac{\left(\frac{\partial y(x+d x)}{\partial x} - \frac{\partial y(x)}{\partial x}\right)}{dx}$</span>. Notando que o termo à direita é a segunda derivada de <span class="math inline"><em>y</em></span> em relação a <span class="math inline"><em>x</em></span>, chegamos à equação da onda:</p>
-<p><br /><span class="math display">$$\frac{\partial^2 y(x,t)}{\partial t^2} =\frac{T}{\rho} \frac{\partial^2 y(x,t)}{\partial x^2}$$</span><br /></p>
-<p>onde <span class="math inline">$v = \sqrt{\frac{T}{\rho}}$</span> é a velocidade de propagação da onda na corda.</p>
+<p><span class="math display">\[F(x,t) = T(x+d x, t) \left(\frac{\partial y(x+d x)}{\partial x}\right) - T(x, t) \left(\frac{\partial y(x)}{\partial x}\right)\]</span></p>
+<p>Assumindo tensão uniforme e invariável em toda a extensão da corda, condições bastante razoáveis no contexto de instrumentos musicais, podemos escrever <span class="math inline">\(T(x+d x, t) = T(x, t) = T\)</span> e <span class="math inline">\(F(x,t)\)</span> toma a forma $ T \left(\frac{\partial y(x+d x)}{\partial x} - \frac{\partial y(x)}{\partial x}\right)$, quando colocamos <span class="math inline">\(T\)</span> em evidência. Se assumirmos que a massa do segmento infinitesimal da corda pode ser escrita na forma <span class="math inline">\(\rho dx\)</span>, onde <span class="math inline">\(\rho\)</span> é a massa da corda por unidade de comprimento e <span class="math inline">\(dx \approx \sqrt{dx^2+dy^2}\)</span> para oscilações pequenas, aplicando a segunda lei de Newton para força resultante na corda temos $F(x,t) = \rho dx \frac{\partial^2 y}{\partial t^2} $.</p>
+<p>Assim, temos $T \left(\frac{\partial y(x+d x)}{\partial x} - \frac{\partial y(x)}{\partial x}\right) = \rho dx \frac{\partial^2 y}{\partial t^2} $ que podemos reorganizar como <span class="math inline">\(\frac{\partial^2 y}{\partial t^2} = \frac{T}{\rho} \frac{\left(\frac{\partial y(x+d x)}{\partial x} - \frac{\partial y(x)}{\partial x}\right)}{dx}\)</span>. Notando que o termo à direita é a segunda derivada de <span class="math inline">\(y\)</span> em relação a <span class="math inline">\(x\)</span>, chegamos à equação da onda:</p>
+<p><span class="math display">\[\frac{\partial^2 y(x,t)}{\partial t^2} =\frac{T}{\rho} \frac{\partial^2 y(x,t)}{\partial x^2}\]</span></p>
+<p>onde <span class="math inline">\(v = \sqrt{\frac{T}{\rho}}\)</span> é a velocidade de propagação da onda na corda.</p>
 <p>Uma solução para essa equação foi proposta por d’Alembert, na forma:</p>
-<p><br /><span class="math display"><em>y</em>(<em>x</em>, <em>t</em>) = <em>F</em>(<em>x</em> + <em>v</em><em>t</em>) − <em>G</em>(<em>x</em> − <em>v</em><em>t</em>)</span><br /></p>
-<p>Essa equação pode ser intepretada como dois pulsos viajando em sentidos opostos em uma corda infinita com velocidade <span class="math inline"><em>v</em></span>.</p>
-<p>Em <span class="math inline"><em>t</em> = 0</span> podemos escrever:</p>
-<p><span class="math inline"><em>y</em><sub>0</sub>(<em>x</em>) = <em>y</em>(<em>x</em>, 0) = <em>F</em>(<em>x</em>) − <em>G</em>(<em>x</em>)</span></p>
-<p><span class="math inline"><em>v</em><sub>0</sub>(<em>x</em>) = <em>y</em>′(<em>x</em>, 0) = <em>v</em><em>F</em>′(<em>x</em>) − <em>v</em><em>G</em>′(<em>x</em>)</span></p>
-<p><span class="math inline"><em>v</em><em>F</em>(<em>x</em>) − <em>v</em><em>G</em>(<em>x</em>) = ∫<sub> − ∞</sub><sup><em>x</em></sup><em>v</em><sub>0</sub>(<em>ϵ</em>)<em>d</em><em>ϵ</em></span></p>
+<p><span class="math display">\[y(x,t)=F(x+vt)-G(x-vt)\]</span></p>
+<p>Essa equação pode ser intepretada como dois pulsos viajando em sentidos opostos em uma corda infinita com velocidade <span class="math inline">\(v\)</span>.</p>
+<p>Em <span class="math inline">\(t=0\)</span> podemos escrever:</p>
+<p><span class="math inline">\(y_0(x)=y(x,0)=F(x)-G(x)\)</span></p>
+<p><span class="math inline">\(v_0(x)=y&#39;(x,0)=vF&#39;(x)-vG&#39;(x)\)</span></p>
+<p><span class="math inline">\(vF(x)-vG(x)= \int_{-\infty}^x v_0(\epsilon) d\epsilon\)</span></p>
 <p>O que nos dá um sistema de equações que, resolvido, nos permite reescrever a equação de d’Alembert em função das condições iniciais de deslocamento e velocidade na corda, como abaixo:</p>
-<p><br /><span class="math display">$$y(x,t)= \frac{1}{2} \Big(y_0(x+vt)-y_0(x-vt) \Big) + \frac{1}{2v}\Big(\int_{x-vt}^{x+vt} v_0(\epsilon) d\epsilon \Big)$$</span><br /></p>
+<p><span class="math display">\[y(x,t)= \frac{1}{2} \Big(y_0(x+vt)-y_0(x-vt) \Big) + \frac{1}{2v}\Big(\int_{x-vt}^{x+vt} v_0(\epsilon) d\epsilon \Big)\]</span></p>
 <p>Essa formulação é importante já que em muitos casos pode-se trabalhar apenas com o deslocamento inicial da corda, o que torna o termo à direita zero.</p>
 <p>Alternativamente, pelo método da separação de variáveis, pode-se obter a solução em termos de um soma infinita de senoides estacionárias(<span class="citation" data-cites="gracia2016wave">(Gracia and Sanz-Perela 2016)</span>):</p>
-<p><br /><span class="math display">$$y(x,t)= \sum_{n=1}^{\infty} \big(a_n \cos(2 \pi f_n t) +  b_n \sin(2 \pi f_n t\big) \sin(\frac{n \pi x}{L})$$</span><br /></p>
-<p>onde considera-se uma corda de comprimento <span class="math inline"><em>L</em></span> fixa em suas extremidades. <span class="math inline"><em>f</em><sub><em>n</em></sub></span> são os harmonicos da corda e são dados pela equação <span class="math inline">$\frac{nv}{2l}$</span>. Além disso, os coeficientes $a_n $ e <span class="math inline"><em>b</em><sub><em>n</em></sub></span> são dados pelos coeficiente da trasformada de Fourier das condições iniciais em <span class="math inline"><em>t</em> = 0</span> (<span class="math inline"><em>y</em><sub>0</sub>(<em>x</em>)</span> e <span class="math inline"><em>v</em><sub>0</sub>(<em>x</em>)</span>) (<span class="citation" data-cites="salsa2016partial">(Salsa 2016)</span>)</p>
+<p><span class="math display">\[y(x,t)= \sum_{n=1}^{\infty} \big(a_n \cos(2 \pi f_n t) +  b_n \sin(2 \pi f_n t\big) \sin(\frac{n \pi x}{L})\]</span></p>
+<p>onde considera-se uma corda de comprimento <span class="math inline">\(L\)</span> fixa em suas extremidades. <span class="math inline">\(f_n\)</span> são os harmonicos da corda e são dados pela equação <span class="math inline">\(\frac{nv}{2l}\)</span>. Além disso, os coeficientes $a_n $ e <span class="math inline">\(b_n\)</span> são dados pelos coeficiente da trasformada de Fourier das condições iniciais em <span class="math inline">\(t=0\)</span> (<span class="math inline">\(y_0(x)\)</span> e <span class="math inline">\(v_0(x)\)</span>) (<span class="citation" data-cites="salsa2016partial">(Salsa 2016)</span>)</p>
 <p>essas duas interpretações dão origem às duas escolas distintas de modelagem acústica, como referido anteriormente, uma focada no domínio do tempo e outra no domínio da frequência.</p>
 <p>Repare, no entanto, que ambas as soluções modelam uma corda ideal, não levando em conta a rigidez encontrada em cordas reais.</p>
-<p>No domínio do tempo, <span class="citation" data-cites="smith1992physical">(Smith 1992)</span> aponta que a rigidez implica no fato de que ondas com diferentes frequências viajam através da corda em velocidades diferentes, relação regida por <span class="math inline">$c(w) = c_0(\frac{1+kw^2}{2Kc_0^2})$</span> com <span class="math inline"><em>k</em> = <em>E</em><em>π</em><em>r</em><sup>4</sup><em>π</em>/4</span> onde <span class="math inline"><em>E</em></span> é o modulo de Young e <span class="math inline"><em>r</em></span> é o raio da corda.</p>
-<p>No domínio da frequência <span class="citation" data-cites="rigaud2013parametric">(Rigaud, David, and Daudet 2013)</span> demonstra que a rigidez pode ser incorporada ao modelo através da substituição do termo que descreve as frequências de cada parcial por <span class="math inline">$fn = f_0 \sqrt{1 + Bn^2}$</span> onde <span class="math inline">$f_0 = \frac{1}{2l} \sqrt{\frac{T}{\rho}}$</span> e <span class="math inline">$B = \frac{\pi^3Ed^4}{64Tl^2}$</span> onde <span class="math inline"><em>E</em></span> é o modulo de Young e <span class="math inline"><em>d</em></span> é o diâmetro da corda.</p>
-<p>A maneira mais fácil de acomodar o decaimento devido à forças dissipativas, completando a teoria necessária ao presente trabalho, é modular as amplitudes em ambas as soluções a partir de um termo da forma <span class="math inline"><em>e</em><sup> − <em>α</em><em>t</em></sup></span></p>
-<h2 id="formalização-de-uma-rede-neural---forward-pass">Formalização de uma Rede Neural - Forward Pass</h2>
+<p>No domínio do tempo, <span class="citation" data-cites="smith1992physical">(Smith 1992)</span> aponta que a rigidez implica no fato de que ondas com diferentes frequências viajam através da corda em velocidades diferentes, relação regida por <span class="math inline">\(c(w) = c_0(\frac{1+kw^2}{2Kc_0^2})\)</span> com <span class="math inline">\(k = E \pi r^4 \pi / 4\)</span> onde <span class="math inline">\(E\)</span> é o modulo de Young e <span class="math inline">\(r\)</span> é o raio da corda.</p>
+<p>No domínio da frequência <span class="citation" data-cites="rigaud2013parametric">(Rigaud, David, and Daudet 2013)</span> demonstra que a rigidez pode ser incorporada ao modelo através da substituição do termo que descreve as frequências de cada parcial por <span class="math inline">\(fn = f_0 \sqrt{1 + Bn^2}\)</span> onde <span class="math inline">\(f_0 = \frac{1}{2l} \sqrt{\frac{T}{\rho}}\)</span> e <span class="math inline">\(B = \frac{\pi^3Ed^4}{64Tl^2}\)</span> onde <span class="math inline">\(E\)</span> é o modulo de Young e <span class="math inline">\(d\)</span> é o diâmetro da corda.</p>
+<p>A maneira mais fácil de acomodar o decaimento devido à forças dissipativas, completando a teoria necessária ao presente trabalho, é modular as amplitudes em ambas as soluções a partir de um termo da forma <span class="math inline">\(e^{-\alpha t}\)</span></p>
+<h2 id="formaliza&#xE7;&#xE3;o-de-uma-rede-neural-forward-pass">Formalização de uma Rede Neural - Forward Pass</h2>
 <p>Define-se uma camada de uma rede neural artificial conforme o diagrama abaixo:</p>
 <figure>
-<img src="im/layer.png" alt="representação de uma camada de uma rede" width="200" /><figcaption>representação de uma camada de uma rede</figcaption>
+<img src="im/layer.png" alt="representa&#xE7;&#xE3;o de uma camada de uma rede" width="200"><figcaption>representação de uma camada de uma rede</figcaption>
 </figure>
 <p>Onde:</p>
-<p><span class="math inline"><em>I</em><sub>1 × <em>m</em></sub> := [<em>i</em><sub>1</sub>…<em>i</em><sub><em>m</em></sub>]</span> é um vetor de inputs à rede, e <span class="math inline"><em>T</em><sub>1 × <em>n</em></sub> := [<em>t</em><sub>1</sub>…<em>t</em><sub><em>n</em></sub>]</span>um vetor de alvos, de forma que para cada um dos ventores de input há um vetor de alvo correspondente, com a mesma dimensão da saída da camada;</p>
-<p><br /><span class="math display">$$ W_{m \times n} :=
+<p><span class="math inline">\(I_{1 \times m} := [i_1 \dots i_m]\)</span> é um vetor de inputs à rede, e <span class="math inline">\(T_{1 \times n} := [t_1 \dots t_n]\)</span>um vetor de alvos, de forma que para cada um dos ventores de input há um vetor de alvo correspondente, com a mesma dimensão da saída da camada;</p>
+<p><span class="math display">\[ W_{m \times n} :=
 \left[ \begin{matrix}
 w_{11} &amp; \dots &amp; w_{1n} \\
 \vdots &amp; \ddots &amp; \vdots \\
 w_{m1} &amp; \dots &amp; w_{mn}
-\end{matrix} \right] $$</span><br /></p>
-<p>é uma matriz representando os pesos das ligações entre os neurônios de entrada e saída, de forma que <span class="math inline"><em>w</em><sub><em>i</em><em>j</em></sub></span> seria o peso da ligação entre o iésimo neurônio de entrada e o jésimo neurônio de saída.</p>
-<p><span class="math inline"><em>A</em><sub>1 × <em>n</em></sub> := [<em>a</em><sub>1</sub>…<em>a</em><sub><em>n</em></sub>] | <em>a</em><sub><em>y</em></sub> := <em>w</em><sub>1<em>y</em></sub><em>i</em><sub>1</sub> + … + <em>w</em><sub><em>n</em><em>y</em></sub><em>i</em><sub><em>n</em></sub></span> representa cada elemento da multiplicação entre o vetor de entrada e os pesos da camada, antes da aplicação, elemento à elemento, da função de ativação;</p>
-<p><span class="math inline"><em>O</em><sub>1 × <em>n</em></sub> := [<em>o</em><sub>1</sub>…<em>o</em><sub><em>n</em></sub>] | <em>o</em><sub><em>y</em></sub> := <em>f</em>(<em>a</em><sub><em>y</em></sub>) = <em>f</em>(<em>w</em><sub>1<em>y</em></sub><em>i</em><sub>1</sub> + … + <em>w</em><sub><em>n</em><em>y</em></sub><em>i</em><sub><em>n</em></sub>)</span> é um vetor representando as saídas finais da camada;</p>
-<p><span class="math inline"><em>E</em><sub>1 × <em>n</em></sub> := [<em>e</em><sub>1</sub>…<em>e</em><sub><em>n</em></sub>] | <em>e</em><sub><em>y</em></sub> := <em>ε</em>(<em>o</em><sub><em>y</em></sub>, <em>t</em><sub><em>y</em></sub>) = <em>ε</em>(<em>f</em>(<em>w</em><sub>1<em>y</em></sub><em>i</em><sub>1</sub> + … + <em>w</em><sub><em>n</em><em>y</em></sub><em>i</em><sub><em>n</em></sub>), <em>t</em><sub><em>y</em></sub>)</span> representa os erros individuais da rede para cada uma das saída motivadas por cada um dos inputs. Cabe notar que <span class="math inline"><em>ε</em>(<em>o</em><sub><em>y</em></sub>, <em>t</em><sub><em>y</em></sub>) = (<em>o</em><sub><em>y</em></sub> − <em>t</em><sub><em>y</em></sub>)<sup>2</sup></span> é a forma mais usual de computo dos erros individuais; define-se ainda o escalar <span class="math inline"><em>q</em> := <em>e</em><sub>1</sub> + … + <em>e</em><sub><em>n</em></sub></span> como a soma dos erros individuais para cada um dos vetores de erros.</p>
+\end{matrix} \right] \]</span></p>
+<p>é uma matriz representando os pesos das ligações entre os neurônios de entrada e saída, de forma que <span class="math inline">\(w_{ij}\)</span> seria o peso da ligação entre o iésimo neurônio de entrada e o jésimo neurônio de saída.</p>
+<p><span class="math inline">\(A_{1 \times n} := [a_1 \dots a_n] \ |\
+a_y := w_{1y}i_1 + \dots + w_{ny}i_n\)</span> representa cada elemento da multiplicação entre o vetor de entrada e os pesos da camada, antes da aplicação, elemento à elemento, da função de ativação;</p>
+<p><span class="math inline">\(O_{1 \times n} := [o_1 \dots o_n] \ |\
+o_y := f(a_y) = f(w_{1y}i_1 + \dots + w_{ny}i_n)\)</span> é um vetor representando as saídas finais da camada;</p>
+<p><span class="math inline">\(E_{1 \times n} := [e_1 \dots e_n] \ |\
+e_y := \varepsilon (o_y, t_y) = \varepsilon (f(w_{1y}i_1 + \dots + w_{ny}i_n) , t_y)\)</span> representa os erros individuais da rede para cada uma das saída motivadas por cada um dos inputs. Cabe notar que <span class="math inline">\(\varepsilon (o_y, t_y) = (o_y - t_y)^2\)</span> é a forma mais usual de computo dos erros individuais; define-se ainda o escalar <span class="math inline">\(q := e_1 + \dots + e_n\)</span> como a soma dos erros individuais para cada um dos vetores de erros.</p>
 <p>De posse das definições acima, somos capazes de definir de forma compacta, em notação matricial, o movimento de predição (forward pass) de uma camada, como será visto. E, por extensão, de uma rede, na medida em que estas podem ser trivialmente obtidas pela justaposição de um número arbitrários de camadas. O mesmo pensamento, de forma simétrica, presta-se à definição do movimento que atualizará os pesos (backward pass), e que é formalizado na próxima seção. Dessa forma, derivaremos a seguir a forma básica do algoritmo de backpropagation. Além de introduzir o referencial matemático, isso permitirá que as extensões desse algoritmo, como Adam e Adagrad, utilizadas adiante, possam ser mais rigorosamente compreendidas.</p>
-<h2 id="formalização-de-uma-rede-neural---backpropagation">Formalização de uma Rede Neural - Backpropagation</h2>
-<p>Tem-se que o gradiente do tensor de erros em relação a um peso arbitrário pode ser escrito da forma abaixo, com aplicação direta da regra da cadeia, e observando a seguinte notação para uma função qualquer <span class="math inline"><em>h</em>(<em>x</em>)</span> : <span class="math inline">$\frac{\partial}{\partial x}h(x) = h'(x)$</span>:</p>
-<p><br /><span class="math display">$$
+<h2 id="formaliza&#xE7;&#xE3;o-de-uma-rede-neural-backpropagation">Formalização de uma Rede Neural - Backpropagation</h2>
+<p>Tem-se que o gradiente do tensor de erros em relação a um peso arbitrário pode ser escrito da forma abaixo, com aplicação direta da regra da cadeia, e observando a seguinte notação para uma função qualquer <span class="math inline">\(h(x)\)</span> : <span class="math inline">\(\frac{\partial}{\partial x}h(x) = h&#39;(x)\)</span>:</p>
+<p><span class="math display">\[
 \frac{\partial q }{\partial w_{xy}} =
-\varepsilon' (o_y, t_y) f'(a_y)i_x
+\varepsilon&#39; (o_y, t_y) f&#39;(a_y)i_x
 \quad \text{Eq.:(I)}
-$$</span><br /></p>
-<p>A matriz de incrementos para cada um dos pesos, a cada iteração, pode ser definida como abaixo, com a adição de uma taxa de aprendizado <span class="math inline"><em>α</em></span> com sinal negativo. Assim é, uma vez que o gradiente acima aponta para sentido de maior crescimento dos erros no espaço dos pesos: minimizar os erros implica, portanto, em mover os pesos em sentido oposto.</p>
-<p><br /><span class="math display">$$
+\]</span></p>
+<p>A matriz de incrementos para cada um dos pesos, a cada iteração, pode ser definida como abaixo, com a adição de uma taxa de aprendizado <span class="math inline">\(\alpha\)</span> com sinal negativo. Assim é, uma vez que o gradiente acima aponta para sentido de maior crescimento dos erros no espaço dos pesos: minimizar os erros implica, portanto, em mover os pesos em sentido oposto.</p>
+<p><span class="math display">\[
 \Delta W_{m \times n} :=
 \left[ \begin{matrix}
 \Delta w_{11} &amp; \dots &amp; \Delta w_{1n} \\
 \vdots &amp; \ddots &amp; \vdots \\
 \Delta w_{m1} &amp; \dots &amp; \Delta w_{mn}
 \end{matrix} \right]  \ |\
-\Delta w_{xy} := - \alpha \frac{\partial q}{\partial w_{xy}} = - \alpha \varepsilon' (o_y, t_y) f'(a_y)i_x
-$$</span><br /></p>
+\Delta w_{xy} := - \alpha \frac{\partial q}{\partial w_{xy}} = - \alpha \varepsilon&#39; (o_y, t_y) f&#39;(a_y)i_x
+\]</span></p>
 <p>Resta definir a forma dos erros nas entradas da rede, permitindo assim que um número arbitrário de camadas sejam conectadas e treinadas. Para tanto, convém considerar uma camada anterior à rede em tela, conceitual, com a seguinte forma e notação:</p>
 <figure>
-<img src="im/back02.png" alt="Duas camadas sobrepostas" width="400" /><figcaption>Duas camadas sobrepostas</figcaption>
+<img src="im/back02.png" alt="Duas camadas sobrepostas" width="400"><figcaption>Duas camadas sobrepostas</figcaption>
 </figure>
 <p>E, de forma análoga:</p>
-<p><br /><span class="math display">$$
+<p><span class="math display">\[
 \begin{align}
 Z_{1 \times m} :=&amp; [z_1 \dots z_m] \ |\
 z_x := u_{1x}p_1 + \dots + u_{kx}p_k
@@ -282,40 +507,40 @@ z_x := u_{1x}p_1 + \dots + u_{kx}p_k
 I_{1 \times m} =&amp; [i_1 \dots i_m] \ |\
 i_x := g(z_x) = g(u_{1x}p_1 + \dots + u_{kx}p_k)
 \end{align}
-$$</span><br /></p>
-<p><br /><span class="math display">$$
+\]</span></p>
+<p><span class="math display">\[
 \begin{align}
 \frac{\partial q}{\partial u_{rx}} =&amp;
 [
-\varepsilon' (o_1, t_1) f'(a_1) w_{x1} g'(z_x)p_r
+\varepsilon&#39; (o_1, t_1) f&#39;(a_1) w_{x1} g&#39;(z_x)p_r
 + \dots +
-\varepsilon' (o_n, t_n) f'(a_n) w_{xn} g'(z_x)p_r
+\varepsilon&#39; (o_n, t_n) f&#39;(a_n) w_{xn} g&#39;(z_x)p_r
 ]
 \\ =&amp;
 [
-\varepsilon' (o_1, t_1) f'(a_1) w_{x1}
+\varepsilon&#39; (o_1, t_1) f&#39;(a_1) w_{x1}
 + \dots +
-\varepsilon' (o_n, t_n) f'(a_n) w_{xn}
-] g'(z_x)p_r
+\varepsilon&#39; (o_n, t_n) f&#39;(a_n) w_{xn}
+] g&#39;(z_x)p_r
 \end{align}
-$$</span><br /></p>
-<p>Comparando com <span class="math inline">I</span> é fácil observar que o somatório na primeira parte da última expressão corresponde a derivada do erro na primeira equação. Podemos definir, da seguinte forma, o tensor do erro propagado:</p>
-<p><br /><span class="math display">$$
+\]</span></p>
+<p>Comparando com <span class="math inline">\(\text{I}\)</span> é fácil observar que o somatório na primeira parte da última expressão corresponde a derivada do erro na primeira equação. Podemos definir, da seguinte forma, o tensor do erro propagado:</p>
+<p><span class="math display">\[
 \begin{align}
 E_{1 \times m}^b :=&amp; [e_1^b \dots e_m^b] \ |\
-e_x^b := \varepsilon' (o_1, t_1)f'(a_1)w_{x1}
+e_x^b := \varepsilon&#39; (o_1, t_1)f&#39;(a_1)w_{x1}
 + \dots +
-\varepsilon' (o_n, t_n) f'(a_n)w_{xn}
+\varepsilon&#39; (o_n, t_n) f&#39;(a_n)w_{xn}
 \end{align}
-$$</span><br /></p>
-<p>Fixamos, dessa forma, todos os termos necessários à uma arquitetura modular: para camadas ocultas, para as quais não há a que se falar em aferirmos diretamente o erro, o mesmo é propagado a partir das camadas posteriores. Em forma vetorial, pode-se sintetizar o algoritmo como abaixo, observando a conveniência de introduzirmos o tensor <span class="math inline"><em>H</em><sub>1 × <em>n</em></sub></span> para evitar redundância nos cálculos, e a notação <span class="math inline">⊙</span> denotando o produto de Hadamard (elemento a elemento) entre dois tensores: <br /><span class="math display">$$
+\]</span></p>
+<p>Fixamos, dessa forma, todos os termos necessários à uma arquitetura modular: para camadas ocultas, para as quais não há a que se falar em aferirmos diretamente o erro, o mesmo é propagado a partir das camadas posteriores. Em forma vetorial, pode-se sintetizar o algoritmo como abaixo, observando a conveniência de introduzirmos o tensor <span class="math inline">\(H_{1 \times n}\)</span> para evitar redundância nos cálculos, e a notação <span class="math inline">\(\odot\)</span> denotando o produto de Hadamard (elemento a elemento) entre dois tensores: <span class="math display">\[
 \begin{align}
 O =&amp; f(IW) \\
-H_{1 \times n} :=&amp; E \odot f'(A)\\
-\Delta W =&amp; -\alpha I^t H= - \alpha I^t (E \odot f'(A)) \\
-E^b =&amp; HW^t= (E \odot f'(A)) W^t
+H_{1 \times n} :=&amp; E \odot f&#39;(A)\\
+\Delta W =&amp; -\alpha I^t H= - \alpha I^t (E \odot f&#39;(A)) \\
+E^b =&amp; HW^t= (E \odot f&#39;(A)) W^t
 \end{align}
-$$</span><br /></p>
+\]</span></p>
 <h1 id="metodologia">Metodologia</h1>
 <h2 id="samples-utilizados">Samples Utilizados</h2>
 <p>Para a busca da coleção de samples a serem utilizados para o treinamento da rede, algumas características são essenciais. Em primeiro lugar, uma licença permissiva, que não limite a utilização, modificação e posterior divulgação dos resultados obtidos. Além disso, para o caso da bateria, todas as peças de um kit ordinário devem estar presentes, e idealmente, organizadas de maneira inteligível, enquanto que para instrumentos temperados é bastante útil algum tipo de indicação da frequência fundamental de cada um dos samples. É desejável também que, para cada peça, samples representando várias dinâmicas tenham sido gravados, com especial atenção à intensidade com que cada peça é golpeada (velocity). Interessante ainda é a presença dos chamados <em>round-robins</em>: gravações redundantes de cada um dos samples, que apresentam uma imagem de como fatores aleatórios influenciam no som produzido pelo instrumento.</p>
@@ -381,23 +606,23 @@ $$</span><br /></p>
 </tbody>
 </table>
 <p>Observa-se, então, que a lógica “convencional” da utilização de redes neurais foi invertida, no melhor do nosso conhecimento, pela primeira vez na literatura: busca-se, de pronto, treinar a rede para a síntese, a partir de inputs arbitrários, de dados predefinidos. Não estamos, por exemplo, como é costumeiro, classificando as diferentes ondas. O que pretende-se é forçar uma associação de cada uma das características da onda à cada campo do input. Esse rationale tem algumas implicações importantes: critérios de validação, embora possíveis de construir, perdem bastante do seu significado e foram deixados de lado em favor de um julgamento subjetivo da qualidade dos samples gerados. Ademais, a habilidade de generalização da rede, embora desejável, não é sempre crucial, ao menos no caso específico das peças discretas de um kit de bateria; para as dinâmicas de cada peça, contudo, sim.</p>
-<h3 id="algoritmos-de-otimização">Algoritmos de Otimização</h3>
+<h3 id="algoritmos-de-otimiza&#xE7;&#xE3;o">Algoritmos de Otimização</h3>
 <p>Utilizando os 100 samples processados como descrito, buscou-se investigar os hiperparâmetros mais adequados; essa é uma etapa importante, pois vários parametros aqui definidos serão assumidos como ótimos e utilizados em etapas posteriores, em arquiteturas diferentes. A razão disso é simplesmente a falta de tempo e poder computacional para realizar novos testes dessa magnitude para cada uma das arquiteturas investigadas. A plataforma escolhida foi o Keras, como acima descrito. Em primeiro lugar, é conveniente investigar o melhor algoritmo de atualização dos pesos: embora, conceitualmente, mesmo a versão pura da descida em gradiente, utilizando uma taxa de aprendizado adequada, leve à eventual convergência da rede, na prática a velocidade dessa convergência varia consideravelmente dependendo do método utilizado, e um algoritmo eficiente permite a realização de mais testes no mesmo intervalo de tempo. A literatura disponível, embora esclarecedora, não é unanime ao apontar uma técnica universal, de forma que uma investigação empírica faz-se necessária, e é descrita a seguir.</p>
 <p>testou-se, em uma rede com uma camada oculta composta por 100 neurons, em minibatches de 100 inputs e durante 500 épocas os seguintes algoritmos de otimização: descida em gradiente (standard gradient descent - sgd) com taxa de aprendizado (learning rate - lr) de 0,01, o algoritmo experimental RMSProp, os otimizadores Adam, Adagrad, Adadelta, Adamax e Nadam. A função de ativação utilizada em todas as camadas foi a tangente hiperbólica (tanh), e a função de perda foi a média dos quadrados dos erros. Foi tomado cuidado para que todos os testes iniciassem em condições pseudo-randomicas idênticas.</p>
 <p>Sgd e Adadelta ofereceram resultados bastante semelhantes, e aquém dos outros. Todos os outros convergiram de forma semelhante, sendo o Adagrad o mais rápido de todos, e Nadam o mais eficaz em diminuição da função de perda (loss).</p>
 <p>A comparação por tempo relativo, disponível a partir do Tensorboard, permite visualizar a superioridade do algoritmo Nadam: com 2,57 minutos de treino, o tempo em que o treinamento foi concluído com o algoritmo Adagrad, ele proporcionou o menor valor da função objetivo.</p>
 <p>Convém investigar, dessa forma, o comportamento da rede treinada com ambos os algoritmos, já que o parâmetro mais importante é a rapidez com que a rede alcança um nível de erro capaz de gerar samples com qualidade satisfatória. Após essa comparação exploratória, mais profunda, poderemos identificar tanto o valor limite da função de perda, quanto o tempo em que a rede mais eficiente leva para alcançá-lo, utilizando essas informações como parâmetros para investigações posteriores, inclusive de outras arquiteturas.</p>
-<h3 id="grid-search-para-topologia-e-parâmetros">Grid search para topologia e parâmetros</h3>
+<h3 id="grid-search-para-topologia-e-par&#xE2;metros">Grid search para topologia e parâmetros</h3>
 <p>Fixado os potenciais algoritmos de otimização, procedeu-se a um grid search, para investigar o número de camadas ocultas, respectivos neurons e o efeitos dos batch sizes na rede, tanto em relação ao tempo de treinamento quanto à velocidade (e limite) de convergência.</p>
 <h4 id="adagrad">Adagrad</h4>
 <p>Testou-se batches de 1, 10, 50, 100, 150 e 200 samples para redes com 25,50,75 e 100 neurônios em cada camada oculta, em um intervalo de 0 a 3 camadas ocultas, gerando um total de 82 redes distintas, que foram treinadas durantes 500 épocas.</p>
 <p>Para uma rede sem camadas ocultas, um batch igual a 1 foi o mais efetivo, em 500 épocas, porém o mais lento. batches de 100 e 50 foram os mais rápidos. O impacto no valor final da perda, no entanto, foi desprezível para todos os tamanhos de batches. para um camada oculta com 25 neurons, batches de 100 e 150 neurons ofereceram resultados idênticos, sendo os mais rápidos e mais eficientes.</p>
 <p>A partir desse ponto, batches de 100, 150 e 200 começaram a apresentar comportamentos semelhantes. Cabe notar que batches unitários parecem piorar muito o tempo de execução na medida em que o número de neurônios aumenta. temos abaixo os melhores resultados por batch e seus respectivos tempos. Todos eles encontram-se nas redes com 3 camadas ocultas.</p>
 <figure>
-<img src="im/adagrad%20loss%20x%20step.png" alt="Adagrad: Loss x Step - 3 camadas ocultas" /><figcaption>Adagrad: Loss x Step - 3 camadas ocultas</figcaption>
+<img src="im/adagrad%20loss%20x%20step.png" alt="Adagrad: Loss x Step - 3 camadas ocultas"><figcaption>Adagrad: Loss x Step - 3 camadas ocultas</figcaption>
 </figure>
 <figure>
-<img src="im/adagrad%20loss%20x%20time.png" alt="Adagrad: Loss x Time - 3 camadas ocultas" /><figcaption>Adagrad: Loss x Time - 3 camadas ocultas</figcaption>
+<img src="im/adagrad%20loss%20x%20time.png" alt="Adagrad: Loss x Time - 3 camadas ocultas"><figcaption>Adagrad: Loss x Time - 3 camadas ocultas</figcaption>
 </figure>
 <table>
 <caption>Menores valores da perda após 500 iterações</caption>
@@ -452,10 +677,10 @@ $$</span><br /></p>
 <h4 id="nadam">Nadam</h4>
 <p>Para essa etapa batches de 10, 50 e 100 samples foram utilizados; dispensou-se batches unitários, pelo comportamento ineficiente identificado, e os batches acima de 100, já que não introduziram melhorias significativas. Foram testadas, para cada um desses batches, redes com todas as combinações entre 25, 50, 75 e 100 neurônios, até o limite de 3 camadas ocultas. Os resultados são apresentados abaixo, para as arquiteturas com 3 camadas.</p>
 <figure>
-<img src="im/nadam%20loss%20x%20step.png" alt="Nadam: Loss x Step - 3 camadas ocultas" width="800" /><figcaption>Nadam: Loss x Step - 3 camadas ocultas</figcaption>
+<img src="im/nadam%20loss%20x%20step.png" alt="Nadam: Loss x Step - 3 camadas ocultas" width="800"><figcaption>Nadam: Loss x Step - 3 camadas ocultas</figcaption>
 </figure>
 <figure>
-<img src="im/nadam%20loss%20x%20time.png" alt="Nadam: Loss x Time - 3 camadas ocultas" width="800" /><figcaption>Nadam: Loss x Time - 3 camadas ocultas</figcaption>
+<img src="im/nadam%20loss%20x%20time.png" alt="Nadam: Loss x Time - 3 camadas ocultas" width="800"><figcaption>Nadam: Loss x Time - 3 camadas ocultas</figcaption>
 </figure>
 <table>
 <caption>Menores valores da perda após 500 iterações</caption>
@@ -507,13 +732,13 @@ $$</span><br /></p>
 </tbody>
 </table>
 <p>Uma rede feedforward com 3 camadas de 75 neurons parece oferecer a arquitetura ideal, com ambos os otimizadores. Esses hisperparametros serviram da base para arquiteturas futuras abordadas neste trabalho.</p>
-<h4 id="ativações-e-otimizadores">Ativações e Otimizadores</h4>
+<h4 id="ativa&#xE7;&#xF5;es-e-otimizadores">Ativações e Otimizadores</h4>
 <p>A performance dos dois, para 2000 steps, é comparada abaixo; também é comparado o impacto da função de ativação softsign, em relação à tanh utilizada até agora.</p>
 <figure>
-<img src="im/softsign%20tanh%20adagrad%20nadam.png" alt="Comparação: Ativações e Otimizadores" /><figcaption>Comparação: Ativações e Otimizadores</figcaption>
+<img src="im/softsign%20tanh%20adagrad%20nadam.png" alt="Compara&#xE7;&#xE3;o: Ativa&#xE7;&#xF5;es e Otimizadores"><figcaption>Comparação: Ativações e Otimizadores</figcaption>
 </figure>
 <p>Podemos ver que a combinação do otimizador Nadam com a função de ativação tanh é a mais eficiente.</p>
-<h3 id="análise-dos-resultados">Análise dos resultados</h3>
+<h3 id="an&#xE1;lise-dos-resultados">Análise dos resultados</h3>
 <p>Os testes acima proporcionam um insight numérico sobre o comportamento geral da arquitetura feedforward na resolução do problema em tela. Faz-se necessário, contudo, uma análise dos samples gerados pelas redes acima, de forma a entender, do ponto de vista sensorial, sua qualidade.</p>
 <p>Além disso, é necessário entender a capacidade de generalização das redes investigadas anteriormente. Tomando como métrica a função de perda final, podemos selecionar algumas redes para investigar os samples por elas gerados.</p>
 <p>Analisando a rede com maior função de perda após o treinamento (a rede sem camadas ocultas treinada com Adagrad em batches de 100), a rede escolhida como baseline (75 neurons em cada uma de 3 camadas ocultas, otimizador Nadam, batches de 100) e a rede com a menor perda após o treinamento (a rede com 75, 100 e 100 neurons em suas camadas ocultas, treinada com Nadam em batches de 10), desenvolveremos alguma intuição acerca da relação entre a função de perda e a qualidade percebida dos samples gerados. Os dados são sintetizados abaixo:</p>
@@ -558,7 +783,7 @@ $$</span><br /></p>
 </table>
 <p>O formato das ondas dos samples da primeira peça da bateria, segundos round-robins, são mostrados na coluna à esquerda da figura abaixo, enquanto que as outras colunas mostram os resultados das redes. os samples podem ser ouvidos no <a href="https://github.com/tesserato/Dissertacao/tree/master/01_wavs_Comparacao_FeedForward">Github</a> do projeto. Nas linhas em que não há um alvo, os resultados foram extrapolados pelas redes. A primeira rede apresenta um balanço razoável entre acurácia e poder de generalização, enquanto a segunda, com um número um pouco menor de parametros, introduz uma quantidade considerável de ruído ao fim dos samples. A terceira, consideravelmente menor, parece ter aprendido uma representação intermediária entre os exemplos, que varia apenas ligeiramente de peça para peça.</p>
 <figure>
-<img src="im/compFF.png" alt="Resultados: Rede Densa" /><figcaption>Resultados: Rede Densa</figcaption>
+<img src="im/compFF.png" alt="Resultados: Rede Densa"><figcaption>Resultados: Rede Densa</figcaption>
 </figure>
 <p>Cabe observar que a primeira rede, com pouco mais de 4 milhões de parâmetros, ocupa-se de cobrir uma família de peças da bateria, e ocupa em disco aproximadamente 50 MB, implicando que um conjunto completo de redes girará em torno de 200MB, na medida em que uma rede ocupe-se dos tambores(incluindo o bumbo), como foi o caso, uma outra da caixa, um terceira do contratempo, e uma quarta para os pratos. Embora o tamanho seja razoável, sobretudo à luz dos instrumentos virtuais comerciais considerados industry standard, como o Superior Drummer 3 da empresa Toontrack, com 230GB, estratégias podem ser utilizadas para aumentar a eficiência da rede.</p>
 <p>Isso torna-se especialmente importante se lembrarmos que limitamos a duração dos samples ao tempo de 1 segundo. Para os tambores, caixa e a maior parte das articulações do contratempo, essa duração é razoável. Os pratos, contudo, principalmente quando alvos de um ataque mais forte, costumar apresentar um tempo de decay de aproximadamente 10 segundos, o que demandaria uma rede no mínimo 10 vezes maior.</p>
@@ -566,113 +791,85 @@ $$</span><br /></p>
 <h2 id="redes-recorrentes-1">Redes Recorrentes</h2>
 <p>Os resultados obtidos com a utilização de redes densas encorajam a investigação do comportamento de redes recorrentes, já que possuem o potencial de diminuir o número de parâmetros, apresentando ainda a possibilidade de generalização do tempo de duração dos sons gerados. Um escolha sensível é dividir os alvos em intervalos de 4410 samples, o que equivale a intervalos de 0.1 segundo para o sampling rate(44100 fps) dos arquivos utilizados, o que equivale à resolução temporal mínima do ouvido humano (xxx). Após alguns testes, a arquitetura recorrente apresentada na figura abaixo foi escolhida.</p>
 <figure>
-<img src="im/RNNnoOverlap.png" alt="Topologia RNN" width="400" /><figcaption>Topologia RNN</figcaption>
+<img src="im/RNNnoOverlap.png" alt="Topologia RNN" width="400"><figcaption>Topologia RNN</figcaption>
 </figure>
 <p>Com 516 210 parametros treináveis (contra 4 472 100 da rede densa), essa topologia gera resultados semelhantes aos da rede totalmente conectada, tanto em relação à função de perda quanto à capacidade de generalização, além de possuir um tamanho em disco aproximadamente 10 vezes menor. A figura abaixo ilustra as ondas geradas correspondendo aos samples 454 e 554, e a generalização da rede para um sample entre os dois, correspondete à um tom entre o tom mais grave e o bumbo. Esse intervalo foi escolhido justamente por apresentar a maior disparidade, tanto sonora quanto visual, entre as ondas.</p>
 <figure>
-<img src="im/compRNN.png" alt="Resultados Rede Recorrente" /><figcaption>Resultados Rede Recorrente</figcaption>
+<img src="im/compRNN.png" alt="Resultados Rede Recorrente"><figcaption>Resultados Rede Recorrente</figcaption>
 </figure>
-<p>Os testes psicoacústicos revelam, porém, que as pequenas descontinuidades entre duas previsões subsequentes (não visíveis na figura acima) traduzem-se em um som de batidas, o que compromete a qualidade do som gerado pela rede. Uma estratégia adotada para contornar o problema, inspirada no funcionamento das redes convolucionais, foi adotar um overlap entre previsões subsequentes da rede; essa região seria ao fim convolucionada com uma função smoothstep decrescente, da forma <span class="math inline">1 − (3<em>x</em><sup>2</sup> − 2<em>x</em><sup>3</sup>)</span>, definida no intervalo entre 0 e 1, a fim de equacionar de forma suave as constribuições dos dois passos da rede, sem introduzir novas descontinuidades. A arquitetura proposta é ilustrada abaixo, e de fato é bastante eficaz em eliminar as descontinuidades diretas entre as previsões.</p>
+<p>Os testes psicoacústicos revelam, porém, que as pequenas descontinuidades entre duas previsões subsequentes (não visíveis na figura acima) traduzem-se em um som de batidas, o que compromete a qualidade do som gerado pela rede. Uma estratégia adotada para contornar o problema, inspirada no funcionamento das redes convolucionais, foi adotar um overlap entre previsões subsequentes da rede; essa região seria ao fim convolucionada com uma função smoothstep decrescente, da forma <span class="math inline">\(1 - (3x^2 - 2x^3)\)</span>, definida no intervalo entre 0 e 1, a fim de equacionar de forma suave as constribuições dos dois passos da rede, sem introduzir novas descontinuidades. A arquitetura proposta é ilustrada abaixo, e de fato é bastante eficaz em eliminar as descontinuidades diretas entre as previsões.</p>
 <figure>
-<img src="im/smoothstep.png" alt="Arquitetura - Convolução Alisada" /><figcaption>Arquitetura - Convolução Alisada</figcaption>
+<img src="im/smoothstep.png" alt="Arquitetura - Convolu&#xE7;&#xE3;o Alisada"><figcaption>Arquitetura - Convolução Alisada</figcaption>
 </figure>
 <p>Os quadrados na região superior esquerda da figura representam os inputs iniciais fornecidos no primeiro passo. Nos passos subsequentes, a rede recebe seus próprios outputs, e a partir deles gera a fração seguinte da onda, de forma recursiva (na prática, como pode ser observado no código do programa no repositório do <a href="">Github</a>, as entradas recebem o mesmo vetor do input inicial em cada passo, ou um vetor nulo, por limitações técnicas. Após o primeiro passo, no entanto, a rede aprende a ignorar essas entradas adicionais). Todas as frações geradas, com exceção da última, possuem um overlap com o início da fração seguinte, e a influência de cada uma das previsões no resultado final dá-se a partir dos pesos retirados da função smoothstep: O primeiro ponto da região de overlap é determinado, portanto, inteiramente pela previsão mais antiga enquanto o último o é totalmente pela previsão mais recente. A influência majoritária nos pontos internos passa gradativamente, de maneira suave, da previsão mais antiga para a mais nova.</p>
 <p>Contudo, nos resultados alisados persiste ainda um problema relacionado, principalmente, ao transiente no meio onda propaga-se a perturabação, uma etapa bastante mal comportada que ocorre logo após o impulso inicial ser aplicada à corda, membrana ou prato e durante a qual o regime (quasi) periódico não foi ainda alcançado. Isso resulta, do ponto de vista da onda, em uma etapa curta, no início do gráfico, que apresenta vibrações aberrantes em frequências diferentese maiores do que frequência fundamental do sistema. Essas frequências são capturadas pela rede recorrente, e erroneamente aplicadas no início de cada um dos seus passos (e não só ao primeiro). A figura abaixo, um detalhe aumentado da onda correspondente ao sample 111 que captura a fronteira entre duas previsões subsequentes, ilustra esse efeito na coluna da direita, enquanto as descontinuidades não tratadas podem ser vistas na coluna da esquerda. As consequências sonoras podem ser ouvido no repositório do <a href="">GitHub</a> preparado para o trabalho e refletem-se em batidas, mais acentuadas no caso das ondas sem o tratamento, com período igual ao tamanho da última camada da rede recorrente sobre o framerate dos samples.</p>
 <figure>
-<img src="im/descontinuidades.png" alt="Descontinuidades e Transientes" /><figcaption>Descontinuidades e Transientes</figcaption>
+<img src="im/descontinuidades.png" alt="Descontinuidades e Transientes"><figcaption>Descontinuidades e Transientes</figcaption>
 </figure>
 <p>O problema é tratável, e um dos encaminhamentos possíveis é distribuir o esforço de previsão entre mais de uma rede, por exemplo, ocupando cada uma de prever uma faixa de frequências. Observou-se, no caso dos samples utilizados até agora, que aproximadamente 4 faixas seriam necessárias, refletindo-se em 4 redes por família de peças, em um total de 16 redes. As exatas fronteiras entre as faixas dependem tanto da arquitetura quanto das características do instrumento a ser emulado e requerem uma investigação empírica bastante extensa que deixou de ser desenvolvida neste trabalho, por limitações de tempo.</p>
 <h2 id="redes-convolucionais-e-convolucionais-recorrentes">Redes Convolucionais e Convolucionais-Recorrentes</h2>
-<h2 id="domínio-da-frequência">Domínio da Frequência</h2>
+<h2 id="dom&#xED;nio-da-frequ&#xEA;ncia">Domínio da Frequência</h2>
 <p>Podemos tirar proveito do caráter periódico dos samples e representá-las diretamente no domínio da frequência. Utilizando a transformada de Fourier, como visto, temos à disposição uma forma de representar perfeitamente a onda utilizando um vetor de números complexos com metade da dimensão da onda original, explorando o fato de que estamos nos restringindo a representações temporais no domínio dos números reais.</p>
 <p>No domínio do tempo, a onda é representada por N números inteiros, cada qual conservadoramente entre +/- 100000. Tomando como referência a linguagem C, na qual a maioria dos motores são implementados, cada um deles ocuparia o espaço de um long integer, ou seja, 4 bytes, para um total de 4 * N bytes por sample. No domínio da frequência, teríamos cada uma das N/2 frequências representadas por dois números reais (floats, em C), que ocupam, cada um, o mesmo espaço de 4 bytes, para um total de 8 * N/2 bytes por sample: o mesmo espaço, portanto.</p>
 <p>A princípio, tal transformação de domínio não introduziria maior eficiência á previsão, do ponto de vista computacional, ao menos. Levando em conta, contudo, que o ouvido humano não é capaz de perceber frequências fora da faixa entre 20hz e 20 khz, identificamos uma das vantagens de utilizarmos as frequências: podemos truncar o resultado da FFT à este intervalo (tomando o cuidado de traduzi-lo em termos das frequências locais da transformada). Além disso, trata-se de uma representação independente do tempo de duração do sample, o que no permite trabalhar com uma arquitetura densa prevendo samples de tamanhos variados. Mais a frente, serão ilustradas outras vantagens dessa abordagem, levando em conta características físicas do instrumento a ser emulado e propriedades da transformada. A imagem a seguir compara a distribuição de frequências do som gerado por um prato de bateria e o som gerado pela Dó central de um piano (tecla 49 em um piano padrão), e ajuda a entender a diferença entre os dois instrumentos, e como, mais adiante, poderemos explorar o carater bem comportado dos sons produzidos por intrumentos afinados.</p>
 <figure>
-<img src="im/CrashxPiano.png" alt="Espectro da intensidade das Frequências Audíveis" /><figcaption>Espectro da intensidade das Frequências Audíveis</figcaption>
+<img src="im/CrashxPiano.png" alt="Espectro da intensidade das Frequ&#xEA;ncias Aud&#xED;veis"><figcaption>Espectro da intensidade das Frequências Audíveis</figcaption>
 </figure>
 <p>Para a emulação de um kit completo de bateria 4 redes foram treinadas; os smaples foram divididos de acordo com as afinidades de diferentes conjuntos de peças e levando em conta também o grau de expressividade demandado. Por exemplo, somente para a caixa e tons foram utilizados <em>round-robins</em>, devido à alta propensão ao efeito <em>machine-gun</em> quando as peças são utilizadas em rápida sucessão, o que é comum em vários estilos musicais. A arquitetura utilizada é como apresentada na figura abaixo e é uniforme para todas as peças; variações no número de parâmetros ocorrem em função da diferença de duração das ondas no caso dos pratos. Para o caso da caixa, contratempo e dos tambores, incluído o bumbo, cada uma das redes é compostapor 120 008 parâmetros, com um tamanho em disco de aproximadamente 1,4 Mb. Os pratos, por possuírem um som com maior tempo de sustentação, demandaram uma rede com saídas maiores, totalizando 360 008 parametros e quase o triplo do tamanho em disco. Temos assim que todo o sistema possui em torno de 9 Mb de tamanho. Não foram utilizadas funções de ativação, tanto para evitar overfitting quanto para permitir uma implementação menos intensiva, do ponto de vista computacional.</p>
 <figure>
-<img src="im/Modelo-Bateria-Caixa.png" alt="Arquitetura para a emulação da Caixa de uma Bateria" width="400" /><figcaption>Arquitetura para a emulação da Caixa de uma Bateria</figcaption>
+<img src="im/Modelo-Bateria-Caixa.png" alt="Arquitetura para a emula&#xE7;&#xE3;o da Caixa de uma Bateria" width="400"><figcaption>Arquitetura para a emulação da Caixa de uma Bateria</figcaption>
 </figure>
 <p>Os resultados são bastante satisfatórios, tanto em termos de acurácia quanto de generalização. A rede não decora nenhuma das distribuições, mas aprende a generaliza-las no espaço bidimensional que tem como eixos o tipo da peça, que reflete a grosso modo uma variação entre agudo e grave e a intensidade da batida. No casa das redes treinadas com o uso de round-robins pode-se pensar em um terceiro eixo no qual a rede generaliza variações percebidas nos samples utilizados para o treinamento. A rigor, o efeito é determinístico, totalmente dependente dos inputs da rede. Pode-se pensar nele, contudo, como um termo que adiciona certa aleatoriedade aos sons gerados, na medida em que pode-se alimentar a rede com um número aleatório entre -1 e 1 para para cada sample gerado. Um efeito colateral desse comportamento geral da rede é que ela não reproduz exatamente nenhum dos samples utilizados no treinamento, e não há garantias do grau de semelhança entre os timbres gerados e os dados originais. Empiricamente, no entanto, observou-se que as características do espectro de frequências aprendidas e generalizadas pela rede imprimem ao resultado um timbre totalmente verossímil; em outras palavras, os tons soam como tons, mas não exatamente com o mesmo timbre que cada uma das peças utilizadas no treinamento, mas como uma amalgama entre elas, assim é com os pratos, e sucessivamente para todas as peças. Quando o esforço é o de emular duas dinâmicas diferentes de uma mesma peça, como é o caso da caixa, em que uma das variáveis é, como para todas as outras peças, a intensidade, e a outra é a centralidade da batida (mais próxima ou afastada do centro da caixa), observa-se resultados ainda mais orgânicos.</p>
 <p>Para sons com características harmonicas, de frequências definidas, esse método não oferece bons resultados, na medida em que incorpora as características gerais de cada um dos sons utilizados no treinamento. É curioso observar que, por exemplo, treinando a rede para aprender a interjeição ‘ah’ cantada em diferentes notas, o resultado tem uma qualidade parecida com um coral. As transformadas são exibidas abaixo, tanto dos sons originais quanto das previsões, para a nota mais baixa e mais alta. É possível reparar que a previsão encaminha-se para os picos em ambos os casos, mas incorporando uma grande quantidade de dados indesejáveis.</p>
 <figure>
-<img src="im/voice.png" alt="Experimento Emulação da Voz Cantada" /><figcaption>Experimento Emulação da Voz Cantada</figcaption>
+<img src="im/voice.png" alt="Experimento Emula&#xE7;&#xE3;o da Voz Cantada"><figcaption>Experimento Emulação da Voz Cantada</figcaption>
 </figure>
 <p>Dessa forma, para a simulação de intrumentos de caráter harmonico, o método apresentado na seção seguinte foi desenvolvido.</p>
 <h2 id="modelo-misto">Modelo Misto</h2>
 <p>Pudemos notar acima que instrumentos de caráter harmonico possuem um distribuição de frequências bem comportada, consistindo basicamente de picos em sua representação no domínio da frequência. Ademais, para que seu som seja considerado harmonioso, esses picos distribuem-se de forma ordenada; idealmente, são múltiplos inteiros da frequência fundamental da nota reproduzida. É importante notar que o largura da ‘base’ desses padrões de picos é proporcional ao decaimento de uma senoide pura: no extremo uma senoide perfeitamente periódica possui uma distribuição de frequências zero em todos os pontos, com excessão da sua frequência. A figura a seguir ilustra essa mecanica.</p>
 <figure>
-<img src="im/fourierDecay.png" alt="Efeito do Decaimento sobre a Tranformada de Fourier: Senoide 440hz" /><figcaption>Efeito do Decaimento sobre a Tranformada de Fourier: Senoide 440hz</figcaption>
+<img src="im/fourierDecay.png" alt="Efeito do Decaimento sobre a Tranformada de Fourier: Senoide 440hz"><figcaption>Efeito do Decaimento sobre a Tranformada de Fourier: Senoide 440hz</figcaption>
 </figure>
 <p>Podemos observar também que o decaimento introduz novas frequências, ao redor da frequência principal, e mudanças de fase na representação no domínio da frequência; observa-se empiricamente que o ‘objetivo’ primordial dessas novas frequencias e fases é reproduzir o efeito de decaimento (ou, de forma mais ampla, o envelope) da onda. Dessa observação, duas intuições importantes podem ser retiradas: A primeira é que, com um grau razoavel de aproximação, podemos descrever um som hamonico gerado por uma excitação impulsiva em função da localização de algumas de suas frequências, suas respectivas intensidades e os seus decaimentos. É natural supor também que a influência das fases dessas ondas pode ser ignorada, o que compra-se empiricamente a partir da resconstrução de ondas com as fases originais e fases nulas ou aleatórias.</p>
 <p>De posse disso podemos, então, descartar as informações sobre a fase específica de cada parcial da onda. Esse fenomeno é construtivo (XXX), de forma que a interposição de ondas não o afeta.</p>
 <figure>
-<img src="im/fourierDecay-comp.png" alt="Onda Composta por Senoides a 110, 220 e 330hz" /><figcaption>Onda Composta por Senoides a 110, 220 e 330hz</figcaption>
+<img src="im/fourierDecay-comp.png" alt="Onda Composta por Senoides a 110, 220 e 330hz"><figcaption>Onda Composta por Senoides a 110, 220 e 330hz</figcaption>
 </figure>
 <p>Resta, então, desenvolver um framework para extração das frequências principais de uma onda sonora, suas respectivas almplitudes e seus envelopes, que aqui assumiremos da forma exponencial. Se lembrarmos que a transformada de Fourier oferece a intensidade de cada uma das frequências que compõe a onda (ou mesmo a amplitude, se normalizada de forma adequada) pode-se supor que o levantamento das duas primeiras informações sobre a onda torna-se trivial. Algumas dificuldades, contudo, logo apresentam-se: elencando as frequencias de maior intensidade de uma onda arbitrária, rapidamente notamos que muitas delas fazem parte de um mesmo pico. Além disso as amplitudes referidas na transformada são as amplitudes médias da frequência em toda a onda que, além de não serem diretamente utilizáveis, não oferecem informação sobre o comportamento delas no tempo.</p>
-<h3 id="frequências">Frequências</h3>
-<p>Atacando a questão das frequências, é conveniente lembrar de que, em uma onda pefeitamente harmonica, temos uma frequência principal <span class="math inline"><em>f</em><sub>0</sub></span>, da qual todas as outras frequências relevantes são múltiplos inteiros, da forma <span class="math inline"><em>f</em><sub><em>n</em></sub> = <em>n</em><em>f</em><sub>0</sub>, <em>n</em> ∈ ℤ<sup>+</sup></span>. Além disso, a frequência fundamental é, geralmente, a de maior intensidade (mas nem sempre, como ilustrado abaixo). Podemos fazer uso desta informação para encontrar os picos em uma onda. No caso das teclas de um piano, a relação entre as 88 teclas e sua frequência fundamental pode ser encontrada a priori a partir da fórmula <span class="math inline"><em>f</em><sub>0</sub> = (<em>t</em><em>e</em><em>c</em><em>l</em><em>a</em><sup>2</sup> − 49)/12 * 440</span>. Podemos, então, buscar os máximos em intervalos de duas vezes o período local correspondente a <span class="math inline"><em>n</em>/<em>f</em><sub>0</sub></span>. A figura a seguir compara esse algoritmo com o simples levantamento dos maiores valores de intensidade, para uma onda correspondete ao som emitido pela tecla 35 de um piano, da qual busca-se os 30 primeiros picos.</p>
+<h3 id="frequ&#xEA;ncias">Frequências</h3>
+<p>Atacando a questão das frequências, é conveniente lembrar de que, em uma onda pefeitamente harmonica, temos uma frequência principal <span class="math inline">\(f_0\)</span>, da qual todas as outras frequências relevantes são múltiplos inteiros, da forma <span class="math inline">\(f_n = n f_0, n \in \mathbb{Z}^+\)</span>. Além disso, a frequência fundamental é, geralmente, a de maior intensidade (mas nem sempre, como ilustrado abaixo). Podemos fazer uso desta informação para encontrar os picos em uma onda. No caso das teclas de um piano, a relação entre as 88 teclas e sua frequência fundamental pode ser encontrada a priori a partir da fórmula <span class="math inline">\(f_0 = (tecla^2 - 49) / 12 * 440\)</span>. Podemos, então, buscar os máximos em intervalos de duas vezes o período local correspondente a <span class="math inline">\(n / f_0\)</span>. A figura a seguir compara esse algoritmo com o simples levantamento dos maiores valores de intensidade, para uma onda correspondete ao som emitido pela tecla 35 de um piano, da qual busca-se os 30 primeiros picos.</p>
 <figure>
-<img src="im/piano_peaks_tecla_35.png" alt="Picos e Valores Máximos - Piano, tecla 35" /><figcaption>Picos e Valores Máximos - Piano, tecla 35</figcaption>
+<img src="im/piano_peaks_tecla_35.png" alt="Picos e Valores M&#xE1;ximos - Piano, tecla 35"><figcaption>Picos e Valores Máximos - Piano, tecla 35</figcaption>
 </figure>
-<p>Repara-se que simplesmente elencando os maiores valores, todos as frequências gravitam em torno as 3 primeiras parciais. Com o algoritmo de busca de picos, as verdadeiras parciais da onda são achadas, em intervalos bastante próximos à multiplos inteiros de <span class="math inline"><em>f</em><sub>0</sub></span>. É interessante observar que a onda ilustrada representa um caso onde a frequência fundamental não corresponde a elevação mais alta.</p>
+<p>Repara-se que simplesmente elencando os maiores valores, todos as frequências gravitam em torno as 3 primeiras parciais. Com o algoritmo de busca de picos, as verdadeiras parciais da onda são achadas, em intervalos bastante próximos à multiplos inteiros de <span class="math inline">\(f_0\)</span>. É interessante observar que a onda ilustrada representa um caso onde a frequência fundamental não corresponde a elevação mais alta.</p>
 <h3 id="decaimentos-e-amplitudes">Decaimentos e Amplitudes</h3>
 <p>Uma abordagem possível para a investigação das frequências parciais identificadas seria a investigação iterativa, seja a partir de um algoritmo de curve fitting, seja com a utilização de redes neurais. Ambos os métodos foram investigados e limitações críticas foram identificadas: O algoritmo iterativo usado para curve fitting não apresenta garantias de convergência. Além disso, o processo iterativo deve ser utilizado para cada uma das ondas, e para cada um dos harmonicos que deseja-se extrair de cada uma delas. Mesmo tratando-se de uma etapa prévia, que não fará parte do modelo em tempo real, os custos computacionais mostraram-se proibitivos (sobretudo para ondas com vários segundos de duração). De maneira semelhante, o método baseado em redes neurais, embora não deixe de convergir, não apresenta garantias sobre a qualidade dos resultados. Além disso, os dois algoritmos são míopes, no sentido de que, na busca por minimizar suas funções objetivo, geram por vezes senoides com aplitudes e decaimentos aberrantes.</p>
-<p>Considerando, de forma aproximada, que todos os decaimentos são exponenciais, é possível estimá-los de forma simples observando a diferença de intensidade da frequência de interesse entre intervalos arbitrários, como por exemplo a primeira e a segunda metades da onda. Tomando o cuidado de converter para as frequências locais, o somatório $ z(f) = _{t-l/2}^{t+l/2}s[t] ~ e^{-2 t f i } dt $ nos fornece essa informação: trata-se do caso discreto da integral da multiplicação ponto a ponto do sinal de interesse <span class="math inline"><em>s</em>(<em>t</em>)</span> com o kernel da transformada de Fourier em função unicamente do tempo <span class="math inline"><em>t</em></span>, com <span class="math inline"><em>f</em></span> fixo na frequência local para a qual deseja-se a amplitude (<span class="math inline"><em>z</em>(<em>f</em>)</span> fornece também a fase média no intervalo). Poderíamos utilizar um número arbitrário de intervelos; dois, no entanto, provaram-se suficientes empiricamente: o decaimento pode ser estimado, então, como <span class="math inline"><em>d</em> = 2ln (<em>a</em><sub>1</sub>/<em>a</em><sub>2</sub>)/<em>l</em></span>. No caso específico de dois intervalos, temos que a amplitude <span class="math inline"><em>a</em></span> é <span class="math inline"><em>a</em><sub>1</sub>/<em>e</em><sup> − <em>d</em><em>l</em>/4</sup> = <em>a</em><sub>2</sub>/<em>e</em><sup> − <em>d</em>3<em>l</em>/4</sup></span>. Abaixo são apresentadas as estimativas para as frequências mais presentes nos sons emitidos por algumas teclas de piano, além de um exemplo demonstrativo com um senoide puro.</p>
+<p>Considerando, de forma aproximada, que todos os decaimentos são exponenciais, é possível estimá-los de forma simples observando a diferença de intensidade da frequência de interesse entre intervalos arbitrários, como por exemplo a primeira e a segunda metades da onda. Tomando o cuidado de converter para as frequências locais, o somatório $ z(f) = \sum_{t-l/2}^{t+l/2}s[t] ~ e^{-2 \pi t f i } dt $ nos fornece essa informação: trata-se do caso discreto da integral da multiplicação ponto a ponto do sinal de interesse <span class="math inline">\(s(t)\)</span> com o kernel da transformada de Fourier em função unicamente do tempo <span class="math inline">\(t\)</span>, com <span class="math inline">\(f\)</span> fixo na frequência local para a qual deseja-se a amplitude (<span class="math inline">\(z(f)\)</span> fornece também a fase média no intervalo). Poderíamos utilizar um número arbitrário de intervelos; dois, no entanto, provaram-se suficientes empiricamente: o decaimento pode ser estimado, então, como <span class="math inline">\(d = 2 \ln(a_1 / a_2) / l\)</span>. No caso específico de dois intervalos, temos que a amplitude <span class="math inline">\(a\)</span> é <span class="math inline">\(a_1 / e^{-d l/ 4} = a_2 / e^{-d 3l/ 4}\)</span>. Abaixo são apresentadas as estimativas para as frequências mais presentes nos sons emitidos por algumas teclas de piano, além de um exemplo demonstrativo com um senoide puro.</p>
 <figure>
-<img src="im/frequencydecay.png" alt="Decaimentos Estimados" /><figcaption>Decaimentos Estimados</figcaption>
+<img src="im/frequencydecay.png" alt="Decaimentos Estimados"><figcaption>Decaimentos Estimados</figcaption>
 </figure>
 <p>Cabe observar que nos casos dos sons do piano ilustrados nos 5 primeiros retangulos acima o decaimento estimado é para uma das muitas frequências, a de maior intesidade no caso, que compõe a onda. No último retangulo, o decaimento coincide com o envelope da onda, que é composta por apenas uma frequência. Estamos, desta forma, equipados para introduzir as redes neurais no modelo, de forma a aprender e generalizar o comportamento dos parametros elencados.</p>
-<!-- Face a essas limitações, tanto de qualidade quanto de eficiência, formulou-se uma abordagem analítica, tomando como base a teoria relacionada à transformada de Fourier e seu teorema da convolução.
-
-Como posto anteriormente, outras formulações existem visando a extração de envelopes, notadamente no campo de processamento de sinais. A metodologia proposta, contudo, é mais apropriada ao trabalho em tela, já que reflete diretamente a amplitude da frequência específica do sinal no domínio do tempo, além de prestar-se à implementações eficientes, duas das quais serão exemplificadas.
-
-Considerando que $s(t)$ é o sinal a ser analisado, no domínio da frequência, e e^{-2 \pi t f / n i} o kernel da transformada de Fourier em função unicamente do tempo $t$, com $f$ fixo na frequência local para a qual deseja-se o envelope temos, para o caso discreto, que a integral de menos a mais infinito, no tempo, da multiplicação desses dois termos nos fornece a amplitude (média, com a normalização adequada) da frequência $f$ na onda $s$. De fato, reparando que o que temos é um dos termos da transformada de Fourier para uma frequência específica, e relembrando a forma geométrica do kernel, as informações que temos no sentido da fração correspondente a uma seno puro e a um cosseno puro (representados pelo número complexo $z$) nos permite reconstruir a amplitude e a fase da frequência $f$ no sinal. Assim $z(f,t) = s(t) ~ e^{\frac{-2 \pi t f} {n} i } $
-
-Para investigar essas informações em partes específicas do sinal, podemos "mascarar" a integral acima, multiplicando a por uma função janela que assume o valor 1 em uma parte do intervalo de duração do sinal ($t \in [0,n)$) e o valor 0 no resto. Sem perda de generalidade, podemos supor que essa função $w(t)$ assume o valor 1 no intervalo entre $t=0$ e $t=l$, e é nula para o restante dos valores de $t$. Fazendo-a função também de l, temos:
-
-$$z(f,t) =  s(t) ~ e^{\frac{-2 \pi t f} {n} i } $$
-
-
-$$z(f) = \int_{-\infty}^{\infty} s(\tau) ~ e^{\frac{-2 \pi \tau f} {n} i } ~ w(t - \tau) ~ d\tau$$
-
-$$z(f) = \int_{t-l}^{t} s(\tau) ~ e^{\frac{-2 \pi \tau f} {n} i }  ~ d\tau$$ -->
-<!-- A representação no domínio da frequência é pouco conveniente para ser utilizada no treinamento de redes neurais, por três razões principais:
-trata-se de uma representação indireta, pouco intuitiva.
-Além disso, pequenos erros propagam-se por toda a onda
-Não há informação parcial do decay, que é reproduzido pela interferência destrutiva de todas as ondas.
-A informação sobre a amplitude sofre de problema análogo.
-
-
-
-
-#### Senoides Principais
-Redução de Dimensionalidade dos Dados
-Podemos sanar o problema da falta de informação parcial sobre decay e amplitude ajustando as principais ondas obtidas pela transformada de Fourier.
-
-4 * senoides < N -->
-<h3 id="formulação-final">Formulação Final</h3>
-<p>Podemos escrever as frequências, tanto a fundamental quanto as parciais, em função das teclas de um piano da seguinte forma: <span class="math inline"><em>f</em>(<em>k</em>, <em>n</em>) = 2<sup>(<em>k</em> − 49)/12</sup>440(<em>n</em> + 1), <em>k</em> ∈ 0, 1, ...88, <em>n</em> ∈ 0, 1, 2, ...</span>. Esse framework é conveniente para uma vasta gama de instrumentos, já que essas 88 vão desde A0 até C8. Para treinar a rede a partir de qualquer instrumento, basta rotular os samples com a número da tecla equivalente de um piano. Como pode ser ouvido nos exemplos, esse procedimento permitiu o treinamento de um instrumento híbrido, utilizando samples de um baixo acústico, para o registro mais grave, cello para o meio, e violino para o mais agudo; todos esses instrumentos, ao mesmo tempo, cobriram até a tecla 75 do piano, somente.</p>
-<p>Como foi visto, essa equação desconsidera as inarmonicidades presentes nos instrumentos, responsáveis por características impoprtantes de seus timbres. Contudo, apresenta uma aproximação inicial bastante razoável que serve tanto para reforçar as características harmonicas básicas quanto para aliviar o esforço de predição da rede, na medida em que podemos adicionar um termo de inarmonicidade na equação acima, a ser aprendido pela rede. Temos, assim: <span class="math inline"><em>f</em>(<em>k</em>, <em>n</em>) = 2<sup>(<em>k</em> − 49)/12</sup>440(<em>n</em> + 1)<em>i</em>(<em>k</em>, <em>n</em>), <em>k</em> ∈ 0, 1, ...88, <em>n</em> ∈ 0, 1, 2, ...</span>. Considerando tanto frequências fundamentais quanto parciais no espectro audível, teríamos um intervalo de 27 hz, a frequência fundamental de A0 até um pouco mais de 20Khz, correspondendo, por exemplo, à quinta parcial de C8. Escolhendo prever as inarmonicidades, por outro lado, reduzimos o intervalo para o limite entre 0 e 3. Além disso, o comportamento é bastante bem comportado, com caráter ligeiramente exponencial, como ilustrado a seguir, para a primeira tecla de um piano, e a tecla 34, a última a ter todas as parciais no espectro audível.</p>
+<h3 id="formula&#xE7;&#xE3;o-final">Formulação Final</h3>
+<p>Podemos escrever as frequências, tanto a fundamental quanto as parciais, em função das teclas de um piano da seguinte forma: <span class="math inline">\(f(k,n)=2^{(k-49)/12}440(n+1), k \in {0,1,...88}, n \in {0,1,2,...}\)</span>. Esse framework é conveniente para uma vasta gama de instrumentos, já que essas 88 vão desde A0 até C8. Para treinar a rede a partir de qualquer instrumento, basta rotular os samples com a número da tecla equivalente de um piano. Como pode ser ouvido nos exemplos, esse procedimento permitiu o treinamento de um instrumento híbrido, utilizando samples de um baixo acústico, para o registro mais grave, cello para o meio, e violino para o mais agudo; todos esses instrumentos, ao mesmo tempo, cobriram até a tecla 75 do piano, somente.</p>
+<p>Como foi visto, essa equação desconsidera as inarmonicidades presentes nos instrumentos, responsáveis por características impoprtantes de seus timbres. Contudo, apresenta uma aproximação inicial bastante razoável que serve tanto para reforçar as características harmonicas básicas quanto para aliviar o esforço de predição da rede, na medida em que podemos adicionar um termo de inarmonicidade na equação acima, a ser aprendido pela rede. Temos, assim: <span class="math inline">\(f(k,n)=2^{(k-49)/12}440(n+1)i(k,n), k \in {0,1,...88}, n \in {0,1,2,...}\)</span>. Considerando tanto frequências fundamentais quanto parciais no espectro audível, teríamos um intervalo de 27 hz, a frequência fundamental de A0 até um pouco mais de 20Khz, correspondendo, por exemplo, à quinta parcial de C8. Escolhendo prever as inarmonicidades, por outro lado, reduzimos o intervalo para o limite entre 0 e 3. Além disso, o comportamento é bastante bem comportado, com caráter ligeiramente exponencial, como ilustrado a seguir, para a primeira tecla de um piano, e a tecla 34, a última a ter todas as parciais no espectro audível.</p>
 <figure>
-<img src="im/inharmonicities.png" alt="inarmonicidades" /><figcaption>inarmonicidades</figcaption>
+<img src="im/inharmonicities.png" alt="inarmonicidades"><figcaption>inarmonicidades</figcaption>
 </figure>
 <p>Este mesmo rationale é aplicado aos decaimentos e amplitudes, que são previstos como uma fração dos valores máximos encontrados em cada uma das teclas (ou notas, mais genericamente, no caso de estarmos treinando um instrumento arbitrário), e encontram-se no intervalo fechado entre 0 e 1. O comportamento das amplitudes e decaimentos máximos, por tecla, é apresentado a seguir, e poderia ser, também, modelado, tanto a partir de redes neurais quanto por meio de modelos matemáticos. Empiricamente, contudo, nota-se que os valores médios são suficientes para um bom resultado. Isso é oportuno, pois reduz a complexidade do modelo final, além de conferir mais generalidade: na imagem abaixo notamos, por exemplo, que há uma descontinuidade nos valores dos decaimentos ocorrendo a partir da tecla 55, que deve-se à mudança de cordas duplas para cordas simples. Esse fenomeno é partircular dos pianos, e, além disso, essa descontinuidade é arbitrária, e varia de piano para piano. Teríamos, então, caso não fizessemos uso da média, formular uma aproximação para cada instrumento treinado (ou treinar uma rede adicional). As amplitudes, embora pareçam possuir uma tendêncial geral de diminuição na medida em que avançamos na escala do piano, possuem comportamento bastante arbritrário.</p>
 <figure>
-<img src="im/piano_max_decays.png" alt="Decaimentos Máximos por Notas" /><figcaption>Decaimentos Máximos por Notas</figcaption>
+<img src="im/piano_max_decays.png" alt="Decaimentos M&#xE1;ximos por Notas"><figcaption>Decaimentos Máximos por Notas</figcaption>
 </figure>
 <figure>
-<img src="im/piano_max_amps.png" alt="Amplitudes Máximas por Notas" /><figcaption>Amplitudes Máximas por Notas</figcaption>
+<img src="im/piano_max_amps.png" alt="Amplitudes M&#xE1;ximas por Notas"><figcaption>Amplitudes Máximas por Notas</figcaption>
 </figure>
 <p>Tendo sido observado que, de posse de uma estimativa do decaimento das frequências parciais, as fases de cada uma dela tem pouco impacto na reconstrução da onda, optou-se por randomizar as fases, de forma a conferir um resultado mais orgânico e variado à sintese executada pelo modelo final. Outra opção seria dar-lhes uma valor arbitrário (como zero, por exemplo).</p>
-<p>Para a previsão de cada uma das 3 quantidades explicitadas, uma rede densa, com 3 camadas foi utilizada. A arquitetura das 3 redes é identica, com exceção do número de neurons em cada uma das camadas ocultas. Optou-se por utilizar como função de ativação uma versão modificada da tangente hiperbólica, na forma <span class="math inline"><em>a</em>(<em>x</em>) = tanh (6 * <em>x</em> − 3)/2 + 1/2</span> de forma a melhor cobrir o intervalo <span class="math inline">[0, 1]</span>. Além disso, o método de inicialização de pesos proposto por (xxxlecun_normal) ofereceu uma melhora considerável no tempo de convergência das redes, e foi utilizado na versão final do modelo. As redes responsáveis pelas amplitudes e decaimentos possuem 50 neuronios em cada uma das camadas ocultas, e um total de 5 301 parametros treináveis, com aproximadamente 100kb de espaço em disco. Sua arquitetura é apresentada abaixo. Para as frequências, o número de neuronios foi reduzido para 10, para evitar overfitting, o que gera um total de 261 parametros treináveis e aproximadamente metade do tamanho em disco. A figura a seguir compara os dados originais com os produzidos pelo modelo.</p>
+<p>Para a previsão de cada uma das 3 quantidades explicitadas, uma rede densa, com 3 camadas foi utilizada. A arquitetura das 3 redes é identica, com exceção do número de neurons em cada uma das camadas ocultas. Optou-se por utilizar como função de ativação uma versão modificada da tangente hiperbólica, na forma <span class="math inline">\(a(x) = \tanh(6 * x - 3) / 2 + 1 / 2\)</span> de forma a melhor cobrir o intervalo <span class="math inline">\([0,1]\)</span>. Além disso, o método de inicialização de pesos proposto por (xxxlecun_normal) ofereceu uma melhora considerável no tempo de convergência das redes, e foi utilizado na versão final do modelo. As redes responsáveis pelas amplitudes e decaimentos possuem 50 neuronios em cada uma das camadas ocultas, e um total de 5 301 parametros treináveis, com aproximadamente 100kb de espaço em disco. Sua arquitetura é apresentada abaixo. Para as frequências, o número de neuronios foi reduzido para 10, para evitar overfitting, o que gera um total de 261 parametros treináveis e aproximadamente metade do tamanho em disco. A figura a seguir compara os dados originais com os produzidos pelo modelo.</p>
 <figure>
-<img src="im/finalnet.png" alt="Previsões - Modelo Misto" /><figcaption>Previsões - Modelo Misto</figcaption>
+<img src="im/finalnet.png" alt="Previs&#xF5;es - Modelo Misto"><figcaption>Previsões - Modelo Misto</figcaption>
 </figure>
 <h1 id="resultados">Resultados</h1>
-<h1 id="conclusão">Conclusão</h1>
-<h1 id="referências" class="unnumbered">Referências</h1>
+<h1 id="conclus&#xE3;o">Conclusão</h1>
+<h1 id="refer&#xEA;ncias" class="unnumbered">Referências</h1>
 <div id="refs" class="references">
 <div id="ref-balle2016end">
 <p>Ballé, Johannes, Valero Laparra, and Eero P Simoncelli. 2016. “End-to-End Optimized Image Compression.” <em>arXiv Preprint arXiv:1611.01704</em>.</p>
@@ -921,3 +1118,16 @@ Podemos sanar o problema da falta de informação parcial sobre decay e amplitud
 <p>Zweig, Geoffrey, Chengzhu Yu, Jasha Droppo, and Andreas Stolcke. 2017. “Advances in All-Neural Speech Recognition.” In <em>Acoustics, Speech and Signal Processing (Icassp), 2017 Ieee International Conference on</em>, 4805–9. IEEE.</p>
 </div>
 </div>
+
+      </div>
+      
+      
+    </body>
+    
+    
+    
+    
+    
+    
+    
+  </html>

@@ -1,1 +1,0 @@
-pandoc -o Dissert.html Dissert.md --bibliography=bib.bib
